@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Татьяна Кудрявцева](https://up.htmlacademy.ru/htmlcss/19/user/572647).
-* Наставник: `Максим Сёмушкин` (https://htmlacademy.ru/profile/id48647).
+* Наставник: [Максим Сёмушкин] (https://htmlacademy.ru/profile/id48647).
 
 ---
 
