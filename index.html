@@ -1,12 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+    <head>
+         <meta charset="utf-8">
+         <title>HTML Academy: Глейси</title>
+         <link  rel="stylesheet" href="style.css">
+         <meta name="keywords" content="Gllacy, Глэйси, мороженое на развес, крем-брюле, пломбир, щербет">
+         <meta name="description" content="Магазин Глэйси - онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес">
+    </head>
+    <body>
+        <header class="main-header">
+           <a class="main-header-logo" href="index.html">
+               <img src="#" alt="Логотип Gllacy Shop">
+           </a>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+            <nav class="main-navigation">
+                <ul class="site-nav">
+                    <li><a href="#">Каталог</a>
+                    <section class="catalogue">
+                    <!--Выпадающее меню-->
+                  </section></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#"> О Компании</a></li>
+                </ul>
 
-  </body>
+                <ul class="user-nav">
+                    <li><a class="btn" href="#">Поиск</a>
+                    <section class="search">
+                    <h2 class="visually-hidden">Поиск</h1>
+                    <!--Строка поиска-->
+                    </section></li>
+                    <li><a class="btn" href="#">Вход</a>
+                    <section class="search">
+                    <h2 class="visually-hidden">Вход</h1>
+                    <!--Форма входа-->
+                    </section></li>
+                    <li><a class="btn" href="#">Корзина</a>
+                    <section class="search">
+                    <h2 class="visually-hidden">Корзина</h1>
+                    <!--Выпадающее меню-->
+                    </section></li>
+                </ul>
+
+                <div class="header-time-phone">
+                <p>C 10 до 20, ежедневно</p><br>
+                <p>8 812 450-25-25</p>
+                </div>
+           </nav>
+   </header>
+
+   <main class="container">
+       <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
+       <div class="promo">
+           <!--Слайдер-->
+           <div class="promo-name">
+               <p>Крем-брюле и пломбир<br>
+                с малиновым джемом</p>
+           </div>
+           <a  class="promo-button-large" href="#">Давайте оба!</a>
+       </div>
+
+       <ul class="actions">
+           <h2 class="visually-hidden">Акции</h2>
+           <li class="action-raspbrerry">
+               <h2>Малинка даром!</h2>
+               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+               <a class="batton" href="#">Хочу варенье!</a>
+           </li>
+           <li class="action-chocolate">
+               <h2>Шоколадки даром!</h2>
+               <p>При покупке 2 кг пломбира, добавим в заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+               <a class="batton" href="#">Хочу шоколадку!</a>
+           </li>
+      </ul>
+
+      <section class="hits">
+          <h2 class="visually-hidden">Хиты продаж</h2>
+          <ul class="hit-pictures">
+              <li>
+                  <img src="#">Хит</img>
+                  <img src="#">Сливочное с апельсиновым джемом</img>
+              </li>
+              <li>
+                  <img src="#">Хит</img>
+                  <img src="#">Сливочно-кофейное</img>
+              </li>
+              <li>
+                  <img src="#">Хит</img>
+                  <img src="#">Сливочно-клубничное</img>
+              </li>
+              <li>
+                 <img src="#">Хит</img>
+                 <img src="#">Сливочное крем-брюле</img>
+             </li>
+         </ul>
+
+         <table class="hit-data">
+             <tr>
+                <td><b>310 ₽</b>/<span class="weight">кг</span></td>
+                <td><b>380 ₽/</b><span class="weight">кг</span></td>
+                <td><b>355 ₽/</b><span class="weight">кг</span></td>
+                <td><b>415 ₽/</b><span class="weight">кг</span></td>
+            </tr>
+            <tr>
+                <td><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></td>
+                <td><a href="#">Сливочно-кофейное с кусочками шоколада</a></td>
+                <td><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></td>
+                <td><a href="#">Сливочное крем-брюле с карамельной подливкой</a></td>
+         </table>
+      </section>
+
+      <section class="production">
+          <h2 class="visually-hidden">О нашей продукции</h2>
+          <p class="lead"><b>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b></p>
+          <ul>
+              <li>
+                  <!--Декоративный элемент-->
+                  <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+              </li>
+              <li>
+                 <!--Декоративный элемент-->
+                 <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+              </li>
+              <li>
+                 <!--Декоративный элемент-->
+                 <p>Закупка ингридиентов производится только  у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+              </li>
+              <li>
+                 <!--Декоративный элемент-->
+                 <p>Доставка нашего мороженого осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет сохранять превосходный вкус.</p>
+             </li>
+         </ul>
+      </section>
+
+      <section class="news">
+          <h2 class="visually-hidden">Наши новости</h2>
+          <article class="blog-news">
+              <h1>Новое в нашем блоге</h1>
+              <p><strong><a href="#">10 способов сервировки фруктовых щербетов к столу</a></strong></p>
+          </article>
+          <div class="subscriprion-news">
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаемне спамить и не слать всякой ерунды. Честно =)</p>
+              <form action="https://gglacey.ru" method="get">
+                  <label>Электронная почта <input type="text" name="e-mail"></label>
+                  <div class="btn">
+                  <input type="submit" value="Отправить">
+                  </div>
+              </form>
+          </div>
+      </section>
+
+      <div class="map-and-contacts">
+          <img src="#" alt="Мороженое">
+          <section class="map">
+              <h2 class="visually-hidden">Как до нас добраться</h2>
+              <!--Карта-->
+          </section>
+          <section class="contacts">
+              <h2 class="visually-hidden">Контактная информация</h2>
+              <p>Адрес главного офиса<br>
+                 и офлайн магазина:
+              <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург<strong></p>
+              <p>Для заказов по телефону:
+              <strong>8 812 450-25-25</strong>
+                      (с 10 до 20 ежедневно)</p>
+              <div class="btn">
+              <a class="batton" href="#">Форма обратной связи</a>
+              <section class="search">
+              <!--Форма обратной связи-->
+          </section>
+     </div>
+</main>
+
+<div class="page-footer">
+    <ul class="footer-social">
+        <li class="social-btn" href="https://vk.com/gglacey">Twitter</li>
+        <li class="social-btn" href="https://vk.com/gglacey">Вконтакте</li>
+        <li class="social-btn" href="https://vk.com/gglacey">Facebook</li>
+        <li class="social-btn" href="https://vk.com/gglacey">Instagram</li>
+    </ul>
+
+    <section class="footer-info">
+        <ul>
+      	    <li><b><!--Декоративный элемент--> <a href="#">Для поставщиков</a></li>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+        </ul>
+    </section>
+
+    <section class="footer-copyright">
+        <p class="footer-copyright">
+            <a class="main-footer-logo">
+            <img src="#" alt="Логотип HTML Academy">
+            </a><br>
+            <b>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</b>
+        </p>
+    </section>
+ </div class="page-footer">
+<sript src="scripts.js"></script>
+</body>
 </html>
