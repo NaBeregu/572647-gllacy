@@ -1,0 +1,1066 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(132, 157, 143);
+}
+
+<!--почему бы тут сразу не прописать, скажем, стиль списков - none, если все они - немаркированные?-->
+
+.button {
+    font-family: inherit;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+
+    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67)100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.button:hover {
+    color: rgb(50, 50, 50);
+
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+.button:focus,
+.button:active {
+    color: rgb(50, 50, 50);
+
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+<!--шапка-->
+
+.main-header-logo {
+    background-image: url("img\header\Logo-Gllacey.svg");
+}
+
+.main-navigation {
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.main-navigation ul {
+    list-style: none;
+}
+
+<!--каталог-->
+
+.secondary-navigation-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.secondary-navigation .button {
+    font-size: 16px;
+    line-height: 18px;
+
+    position: absolute;
+}
+
+.sub-menu: {
+    display: none;
+}
+
+.secondary-navigation .button:hover .sub-menu,
+.secondary-navigation .button:focus .sub-menu {
+    font-size: 14;
+    line-height: 16;
+    color: rgb(50, 50, 50);
+
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    left: 359px;
+    top: 282px;
+    width: 143px;
+    height: 171px;
+}
+
+.secondary-navigation .sub-menu h3 {
+    font-weight: bold;
+}
+
+.secondary-navigation .sub-menu hr {
+    opacity: 0.2;
+    left: 365px;
+    top: 320px;
+    width: 128px;
+    height: 1px;
+}
+
+.novelty-item-chosen:hover,
+.novelty-item-chosen:focus {
+    background-color: rgb(251, 222, 215);
+}
+
+.novelty-item-chosen:active {
+    background-color: rgb(246, 181, 165);
+}
+
+.novelty-item-chosen: current {
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(208, 112, 88);
+}
+
+.secondary-navigation:nth-child(2),
+.secondary-navigation:nth-child(3) {
+    font-size: 14;
+    line-height: 16;
+}
+
+.secondary-navigation:nth-child(2),
+.secondary-navigation:nth-child(3) {
+    font-size: 14;
+    line-height: 16;
+}
+
+.secondary-navigation:nth-child(2):hover,
+.secondary-navigation:nth-child(2):focus,
+.secondary-navigation:nth-child(3):hover,
+.secondary-navigation:nth-child(3):focus {
+    color: rgb(232, 77, 55);
+}
+
+<!--форма поиска-->
+
+.search {
+    position: relative;
+    display: inline-block;
+
+    border-radius: 50%;
+    opacity: 0.2;
+    left: 359px;
+    top: 659px;
+    width: 33px;
+    height: 33px;
+    background-color: rgb(161, 180, 169);
+    background: url(img\header\magnifier.svg);
+}
+
+.search-field {
+    display: none;
+}
+
+.button:hover .search-field,
+.button:focus .search-field {
+    font-size: 14;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-align: left;
+
+    background: url(img\header\magnifier-hover.svg);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(211, 211, 210);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 64px;
+    top: 766px;
+    width: 313px;
+    height: 46px;
+}
+
+.button:hover .search-field input,
+.button:focus .search-field input {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(50, 50, 50);
+    text-align: left;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(211, 211, 210);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 64px;
+    top: 766px;
+    width: 313px;
+    height: 46px;
+}
+
+.button:hover .search-field placeholder,
+.button:focus .search-field placeholder {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-align: left;
+}
+
+.search-field input:hover,
+.search-field input:focus {
+    border-width: 2px;
+    border-color: rgb(154, 154, 154);
+    opacity: 0.52;
+    left: 857px;
+    top: 2542px;
+    width: 267px;
+    height: 44px;
+  }
+
+  .search-field input:active {
+    border-width: 2px;
+    border-color: rgb(211, 211, 210);
+    pacity: 0.52;
+    left: 857px;
+    top: 2606px;
+    width: 267px;
+    height: 44px;
+ }
+
+.enter a {
+    font-size: 14;
+    line-height: 16;
+    color: rgb(255, 255, 255);
+
+    background-image: url(img\header\entrance.svg);
+    position: relative;
+    display: inline-block;
+}
+
+.enter a:hover,
+.enter a:focus {
+    color: rgb(248, 247, 244);
+
+    background-image: url(img\header\entrance.svg);
+}
+
+.enter a:hover .login-form,
+.enter a:focus .login-form {
+    border-radius: 6px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 484px;
+    top: 748px;
+    width: 277px;
+    height: 214px;
+}
+
+.enter-field input {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(50, 50, 50);
+    text-align: left;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(211, 211, 210);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 64px;
+    top: 766px;
+    width: 313px;
+    height: 46px;
+}
+
+.enter-field input:hover,
+.enter-field input:focus {
+    border-width: 2px;
+    border-color: rgb(154, 154, 154);
+    opacity: 0.52;
+    left: 857px;
+    top: 2542px;
+    width: 267px;
+    height: 44px;
+  }
+
+.enter-field input:active {
+    border-width: 2px;
+    border-color: rgb(211, 211, 210);
+    opacity: 0.52;
+    left: 857px;
+    top: 2606px;
+    width: 267px;
+    height: 44px;
+}
+
+.enter a:hover .login-form placeholder,
+.enter a:focus .login-form placeholder: {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-align: left;
+}
+
+.login-form, a {
+    font-size: 14;
+    line-height: 16;
+    color: rgb(50, 50, 50)
+    text-decoration: underline;
+}
+
+.login-form, a:hover,
+.login-form, a:focus {
+    color: rgb(232, 77, 55);
+}
+
+<!--форма входа-->
+
+.enter {
+    font-size: 14;
+    line-height: 16;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(248, 247, 244);
+    background-image: url(img\header\entrance.svg);
+    position: relative;
+    display: inline-block;
+}
+
+.login-form {
+  display: none;
+}
+
+.enter:hover .login-form,
+.enter:focus .login-form {
+    font-size: 14;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-align: left;
+
+    background-color: rgb(153, 153, 153);
+    background-image: url(img\header\etrance-hover.svg);
+    position: absolute;
+}
+
+.enter input {
+    font-size: 14;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-align: left;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(211, 211, 210);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 501px;
+    top: 766px;
+    width: 243px;
+    height: 46px;
+}
+
+.login-form a {
+    font-size: 14;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+    text-decoration: underline;
+}
+
+.login-form .button {
+    font-size: 13;
+    line-height: 24;
+    color: rgb(50, 50, 50);
+    text-align: left;
+    text-decoration: underline;
+
+    bacground-color: rgb(255, 255, 255);
+}
+
+<!--Корзина-->
+
+.basket .basket-button  {
+    font-size: 14;
+    line-height: 16;
+
+    background-color: rgb(157, 177, 165);
+    opacity: 0.2;
+    background: url(img\header\basket.svg);
+    position: relative;
+    display: inline-block;
+    left: 1056px;
+    top: 23px;
+    width: 117px;
+    height: 32px;
+}
+
+.basket .basket-button:focus,
+.basket .basket-button:active {
+    color: rgb(50, 50, 50);
+    background: url(img\header\basket-hover.svg);
+}
+
+.basket:focus,
+.basket-active {
+    color: rgb(50, 50, 50);
+
+    background: url(img\header\basket-hover.svg);
+    bacground-color: rgb(247, 246, 243);
+}
+
+.basket-table {
+    display: none;
+}
+
+.basket:focus .basket-table,
+.basket-active .basket-table {
+    border-radius: 5px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 870px;
+    top: 748px;
+    width: 539px;
+    height: 242px;
+}
+
+.basket:focus .basket-table hr,
+.basket-active .basket-table hr {
+    color: rgb(247, 246, 243);
+    position: absolute;
+    left: 885px;
+    top: 878px;
+    width: 510px;
+    height: 1px;
+}
+
+<!--телефон и часы работы-->
+
+.header-time-phone {
+    font-size: 14;
+    line-height: 16;
+    text-align: right;
+}
+
+.header-time-phone span {
+    font-size: 22;
+    line-height: 24;
+}
+
+<!--слайдер, пока не доделала-->
+
+.promo {
+    font-weight: bold;
+    text-align: center;
+
+    : url("img\index-images\ice-cream-big.jpg");
+}
+
+.slides-switches {
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(132, 157, 143);
+    cursor: pointer;
+}
+
+.slides-switches:nth-child(1) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides-switches:nth-child(1):hover;
+.slides-switches:nth-child(1):focus {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides-switches:nth-child(2):hover;
+.slides-switches:nth-child(2):focus {
+    background-color: rgb(178, 193, 183);
+}
+
+.slides-switches:nth-child(2):active {
+    background-color: rgb(255, 255, 255);
+}
+
+.promo p {
+    font-size: 60;
+    line-height: 60,35;
+}
+
+.promo a {
+    font-size: 32;
+    line-height: 44;
+    color: rgb(255, 255, 255);
+
+    left: 460px;
+    top: 542px;
+    width: 280px;
+    height: 64px;
+}
+
+<!--малинки-шоколадки-->
+
+.action-item {
+    font-weight: bold;
+    text-align: left;
+}
+
+.action-item h2 {
+    font-size: 35;
+    line-height: 41;
+}
+
+.action-item p {
+    font-size: 18;
+    line-height: 22;
+}
+
+.action-item, a {
+    font-size: 18;
+    line-height: 22;
+
+    left: 401px;
+    top: 807px;
+    width: 165px;
+    height: 46px;
+}
+
+.action-item-raspberry {
+    background-color: rgb(145, 1, 29);
+    background-image: url("img\index-images\raspberry.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.action-item-chocolate {
+    background-color: rgb(93, 48, 25)
+    background-image: url("img\index-images\chocolate.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+<!--мороженое, хиты-->
+
+.hit-list {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+.hit-items p {
+    font-size: 45;
+    line-height: 45;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.hit-items span {
+    font-size: 30;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.hit-items button {
+    display: none;
+}
+
+.hit-items a {
+    font-size: 16;
+    line-height: 22;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.hit-items:hover,
+.hit-items:focus: {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 398px;
+    top: 1750px;
+    width: 221px;
+    height: 366px;
+}
+
+.hit-items:hover button,
+.hit-items:focus button: {
+    position: absolute;
+    left: 412px;
+    top: 2055px;
+    width: 193px;
+    height: 44px;
+}
+
+<!--вафля-->
+
+.production {
+    color: rgb(50, 50, 50);
+    text-align: left;
+
+    background-image: url("img\index-images\waffle.png");
+    background-position: 50% 50%;;
+    background-repeat: no-repeat;
+}
+
+.production .lead {
+    font-size: 24;
+    line-height: 30;
+}
+
+.production ul {
+    font-size: 16;
+    line-height: 22;
+
+    list-style: none;
+}
+
+<!--новости и подписка-->
+
+.aside {
+    color: rgb(50, 50, 50);
+    text-align: left;
+}
+
+.blog-news {
+    background-color: rgb(255, 255, 255);
+    background-image: url("img\index-images\strawberry.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.blog-news, h2 {
+    font-size: 16;
+    line-height: 22;
+}
+
+.blog-news, p {
+    font-size: 24;
+    line-height: 30;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.blog-news, p:hover,
+.blog-news, p:focus {
+    color: rgb(232, 77, 55);
+}
+
+.subscription {
+    font-size: 16;
+    line-height: 22;
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("img\index-images\post.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.subscription label {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(50, 50, 50);
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(178, 178, 178);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.52;
+    left: 637px;
+    top: 1758px;
+    width: 370px;
+    height: 46px;
+}
+
+.subscription placeholder {
+    color: rgb(153, 153, 153);
+}
+
+.subscription button {
+    font-size: 18;
+    line-height: 24;
+    font-weight: bold;
+
+    left: 1018px;
+    top: 1759px;
+    width: 129px;
+    height: 44px;
+}
+
+<!--карта и контакты-->
+
+.location {
+    color: rgb(50, 50, 50);
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("img\index-images\map.png");
+    background-repeat: no-repeat;
+}
+
+.location p {
+    font-size: 14;
+    line-height: 20;
+}
+
+.location span {
+    font-size: 18;
+    line-height: 22;
+    font-weight: bold;
+}
+
+.location button {
+    font-size: 18;
+    line-height: 24;
+    font-weight: bold;
+
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    left: 896px;
+    top: 2176px;
+    width: 252px;
+    height: 44px;
+    position: relative;
+    display: inline-block;
+}
+
+<!--форма обратной связи-->
+
+.feedback {
+    display: none;
+}
+
+.location button:hover .feedback,
+.location button:focus .feedback {
+    background-color: rgb(248, 247, 244);
+    position: absolute;
+
+    border-radius: 10px;
+    background-color: rgb(248, 247, 244);
+    position: absolute;
+    left: 363px;
+    top: 337px;
+    width: 478px;
+    height: 443px;
+}
+
+.feedback h2,
+.feedback h2 {
+    font-size: 24;
+    line-height: 28;
+    color: rgb(50, 50, 50);
+}
+
+.feedback .input,
+.feedback .input {
+    font-size: 16;
+    line-height: 24;
+    color: rgb(153, 153, 153);
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(178, 178, 178);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    left: 857px;
+    top: 2478px;
+    width: 269px;
+    height: 46px;
+}
+
+.feedback input:hover;
+.feedback input:focus {
+    font-size: 16;
+    line-height: 24;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+
+    border-width: 2px;
+    border-color: rgb(154, 154, 154);
+    top: 2542px;
+    width: 267px;
+    height: 44px;
+}
+
+.feedback input:active {
+    border-width: 2px;
+    border-color: rgb(46, 136, 228);
+    background-color: rgb(255, 255, 255);
+    top: 2606px;
+    width: 267px;
+    height: 44px;
+}
+
+.feedback placeholder {
+    color: rgb(153, 153, 153);
+}
+
+.feedback .button {
+    left: 677px;
+    top: 709px;
+    width: 139px;
+    height: 44px;
+}
+
+<!--подвал-->
+
+.footer-info {
+    font-size: 13;
+    line-height: 28;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    list-style: none;
+}
+
+.footer-info a:hover,
+.footer-info a:focus {
+    color: rgb(255, 188, 158);
+}
+
+.footer-info span {
+    font-weight: bold;
+}
+
+.footer-copyright {
+    font-size: 12;
+    line-height: 18;
+}
+
+.footer-copyright, a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.footer-copyright, a:hover,
+.footer-copyright, a:focus {
+    color: rgb(255, 188, 158);
+}
+
+<!--КАТАЛОГ-->
+
+.breadcrumbs {
+    font-size: 14;
+    line-height: 16;
+    color: rgb(255, 255, 255);
+
+    list-style: none;
+    text-decoration: underline;
+}
+
+.breadcrumbs:current {
+    text-decoration: none;
+}
+
+.page-title {
+    font-size: 35;
+    line-height: 41;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+<!--фильтры-->
+
+.filters .fieldset {
+    border: none;
+}
+
+.filters {
+    font-size: 16;
+    line-height: 18;
+    text-transform: lowercase;
+}
+
+.filters label {
+    font-size: 14;
+    line-height: 16;
+}
+
+.filter-sorting {
+    background-color: rgb(248, 247, 244);
+    opacity: 0.2;
+    left: 27px;
+    top: 207px;
+    width: 194px;
+    height: 37px;
+    background: url(img\header\basket.svg);
+}
+
+.filter-sorting:hover,
+.filter-sorting:focus {
+    color: rgb(50, 50, 50);
+    background: url(img\header\basket-hover.svg);
+}
+
+.filter-price {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    position: absolute;
+    left: 235px;
+    top: 207px;
+    width: 220px;
+    height: 37px;
+}
+
+<!--?-->
+.filter-price button:hover {
+    cursor: pointer
+}
+
+.filter-fatness {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    position: absolute;
+    left: 469px;
+    top: 207px;
+    width: 415px;
+    height: 37px;
+    list-style: none;
+}
+
+.filter-input-radio + label {
+    background: url(img\header\radio-off.svg);
+}
+
+.filter-input-radio:active {
+    background: url(img\header\radio-on.svg);
+}
+
+<!--?-->
+.filter-input-radio:disabled {
+    color: rgb(144, 156, 154);
+}
+
+.filter-filler {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    left: 27px;
+    top: 281px;
+    width: 703px;
+    height: 37px;
+    list-style: none;
+}
+
+.filter-input-checkbox + label {
+    background: url(img\header\checkbox-off.svg);
+}
+
+.filter-input-checkbox:active {
+    background: url(img\header\checkbox-on.svg);
+}
+
+<!--?-->
+.filter-input-checkbox:disabled {
+    color: rgb(144, 156, 154);
+}
+
+.filter-button {
+  background-color: rgb(169, 185,175);
+}
+
+.filter-button {
+    font-size: 16;
+    line-height: 18;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.188);
+    left: 741px;
+    top: 279px;
+    width: 144px;
+    height: 37px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.filter-button:active {
+   background-color: rgb(234, 234, 234);
+   box-shadow: inset;
+}
+
+<!--Товары-->
+
+.catalog-item:hover,
+.catalog-item:focus {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 398px;
+    top: 1750px;
+    width: 221px;
+    height: 366px;
+}
+
+.catalog-item-price {
+    font-size: 45;
+    line-height: 45;
+    font-weight: bold;
+}
+
+.catalog-item-price span {
+    font-size: 30;
+    line-height: 45;
+    font-weight: bold;
+}
+
+.catalog-list a {
+    font-size: 16;
+    line-height: 22;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    list-style: none;
+}
+
+.catalog-list a:hover,
+.catalog-list a:focus {
+    color: rgb(255, 188, 158);
+}
+
+.pagination-list {
+    font-size: 16;
+    line-height: 18;
+    color: rgb(255, 255, 255);
+}
+
+.pagination-list:current,
+.pagination-list:active {
+    color: rgb(50, 50, 50);
+
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    left: 1065px;
+    top: 2267px;
+    width: 27px;
+    height: 26px;
+}
+
+.pagination-list:hover,
+.pagination-list:focus {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    left: 1123px;
+    top: 2320px;
+    width: 27px;
+    height: 26px;
+    cursor: pointer
+}
+
+.page-footer hr {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.302;
+    left: 27px;
+    top: 1542px;
+    width: 1146px;
+    height: 1px;
+}
