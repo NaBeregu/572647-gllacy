@@ -9,7 +9,7 @@ body {
     background-color: rgb(132, 157, 143);
 }
 
-<!--почему бы тут сразу не прописать, скажем, стиль списков - none, если все они - немаркированные?-->
+/*почему бы тут сразу не прописать, скажем, стиль списков - none, если все они - немаркированные?*/
 
 .button {
     font-family: inherit;
@@ -38,7 +38,7 @@ body {
     box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
 
-<!--шапка-->
+/*шапка*/
 
 .main-header-logo {
     background-image: url("img\header\Logo-Gllacey.svg");
@@ -55,7 +55,7 @@ body {
     list-style: none;
 }
 
-<!--каталог-->
+/*каталог*/
 
 .secondary-navigation-dropdown {
     position: relative;
@@ -136,7 +136,7 @@ body {
     color: rgb(232, 77, 55);
 }
 
-<!--форма поиска-->
+/*форма поиска*/
 
 .search {
     position: relative;
@@ -149,7 +149,7 @@ body {
     width: 33px;
     height: 33px;
     background-color: rgb(161, 180, 169);
-    background: url(img\header\magnifier.svg);
+    background: url(img\svg-gllacy\svg-gllacy\loupe.svg);
 }
 
 .search-field {
@@ -229,7 +229,7 @@ body {
     line-height: 16;
     color: rgb(255, 255, 255);
 
-    background-image: url(img\header\entrance.svg);
+    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
     position: relative;
     display: inline-block;
 }
@@ -238,7 +238,7 @@ body {
 .enter a:focus {
     color: rgb(248, 247, 244);
 
-    background-image: url(img\header\entrance.svg);
+    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
 }
 
 .enter a:hover .login-form,
@@ -312,7 +312,7 @@ body {
     color: rgb(232, 77, 55);
 }
 
-<!--форма входа-->
+/*форма входа*/
 
 .enter {
     font-size: 14;
@@ -320,7 +320,7 @@ body {
     color: rgb(255, 255, 255);
 
     background-color: rgb(248, 247, 244);
-    background-image: url(img\header\entrance.svg);
+    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
     position: relative;
     display: inline-block;
 }
@@ -376,7 +376,7 @@ body {
     bacground-color: rgb(255, 255, 255);
 }
 
-<!--Корзина-->
+/*Корзина*/
 
 .basket .basket-button  {
     font-size: 14;
@@ -384,7 +384,7 @@ body {
 
     background-color: rgb(157, 177, 165);
     opacity: 0.2;
-    background: url(img\header\basket.svg);
+    background: url(img\svg-gllacy\svg-gllacy\basket.svg);
     position: relative;
     display: inline-block;
     left: 1056px;
@@ -396,7 +396,7 @@ body {
 .basket .basket-button:focus,
 .basket .basket-button:active {
     color: rgb(50, 50, 50);
-    background: url(img\header\basket-hover.svg);
+    background: url(img\svg-gllacy\svg-gllacy\basket-red.svg);
 }
 
 .basket:focus,
@@ -433,7 +433,7 @@ body {
     height: 1px;
 }
 
-<!--телефон и часы работы-->
+/*телефон и часы работы*/
 
 .header-time-phone {
     font-size: 14;
@@ -446,7 +446,7 @@ body {
     line-height: 24;
 }
 
-<!--слайдер, пока не доделала-->
+/*слайдер, пока не доделала*/
 
 .promo {
     font-weight: bold;
@@ -499,7 +499,7 @@ body {
     height: 64px;
 }
 
-<!--малинки-шоколадки-->
+/*малинки-шоколадки*/
 
 .action-item {
     font-weight: bold;
@@ -540,7 +540,7 @@ body {
     background-repeat: no-repeat;
 }
 
-<!--мороженое, хиты-->
+/*мороженое, хиты*/
 
 .hit-list {
     position: relative;
@@ -595,7 +595,7 @@ body {
     height: 44px;
 }
 
-<!--вафля-->
+/*вафля*/
 
 .production {
     color: rgb(50, 50, 50);
@@ -618,7 +618,7 @@ body {
     list-style: none;
 }
 
-<!--новости и подписка-->
+/*новости и подписка*/
 
 .aside {
     color: rgb(50, 50, 50);
@@ -653,8 +653,9 @@ body {
     font-size: 16;
     line-height: 22;
 
+    background-image: rgb(255, 255, 255), url(https://img\svg-gllacy\svg-gllacy\bg-post.svg);
+    background-blend-mode: normal;
     background-color: rgb(255, 255, 255);
-    background-image: url("img\index-images\post.svg");
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -691,7 +692,7 @@ body {
     height: 44px;
 }
 
-<!--карта и контакты-->
+/*карта и контакты*/
 
 .location {
     color: rgb(50, 50, 50);
@@ -699,6 +700,11 @@ body {
     background-color: rgb(255, 255, 255);
     background-image: url("img\index-images\map.png");
     background-repeat: no-repeat;
+}
+
+.location .location-map {
+  background-image: url("img\svg-gllacy\svg-gllacy\pin.svg"), url("img\index-images\map.png");
+  background-blend-mode: normal;
 }
 
 .location p {
@@ -726,7 +732,7 @@ body {
     display: inline-block;
 }
 
-<!--форма обратной связи-->
+/*форма обратной связи*/
 
 .feedback {
     display: none;
@@ -804,7 +810,7 @@ body {
     height: 44px;
 }
 
-<!--подвал-->
+/*подвал*/
 
 .footer-info {
     font-size: 13;
@@ -838,7 +844,7 @@ body {
     color: rgb(255, 188, 158);
 }
 
-<!--КАТАЛОГ-->
+/*КАТАЛОГ*/
 
 .breadcrumbs {
     font-size: 14;
@@ -860,7 +866,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-<!--фильтры-->
+/*фильтры*/
 
 .filters .fieldset {
     border: none;
@@ -884,13 +890,12 @@ body {
     top: 207px;
     width: 194px;
     height: 37px;
-    background: url(img\header\basket.svg);
+    background: url(img\svg-gllacy\svg-gllacy\select-arrow.svg);
 }
 
 .filter-sorting:hover,
 .filter-sorting:focus {
     color: rgb(50, 50, 50);
-    background: url(img\header\basket-hover.svg);
 }
 
 .filter-price {
@@ -903,9 +908,10 @@ body {
     height: 37px;
 }
 
-<!--?-->
+/*?*/
 .filter-price button:hover {
     cursor: pointer
+    background: url(img\svg-gllacy\svg-gllacy\filter-button.svg);
 }
 
 .filter-fatness {
@@ -920,14 +926,14 @@ body {
 }
 
 .filter-input-radio + label {
-    background: url(img\header\radio-off.svg);
+    background: url(img\svg-gllacy\svg-gllacy\radio-off.svg);
 }
 
 .filter-input-radio:active {
-    background: url(img\header\radio-on.svg);
+    background: url(img\svg-gllacy\svg-gllacy\radio-on.svg);
 }
 
-<!--?-->
+/*?*/
 .filter-input-radio:disabled {
     color: rgb(144, 156, 154);
 }
@@ -943,20 +949,16 @@ body {
 }
 
 .filter-input-checkbox + label {
-    background: url(img\header\checkbox-off.svg);
+    background: url(img\svg-gllacy\svg-gllacy\checkbox-off.svg);
 }
 
 .filter-input-checkbox:active {
-    background: url(img\header\checkbox-on.svg);
+    background: url(img\svg-gllacy\svg-gllacy\checkbox-on.svg);
 }
 
-<!--?-->
+/*?*/
 .filter-input-checkbox:disabled {
     color: rgb(144, 156, 154);
-}
-
-.filter-button {
-  background-color: rgb(169, 185,175);
 }
 
 .filter-button {
@@ -986,7 +988,7 @@ body {
    box-shadow: inset;
 }
 
-<!--Товары-->
+/*Товары*/
 
 .catalog-item:hover,
 .catalog-item:focus {
