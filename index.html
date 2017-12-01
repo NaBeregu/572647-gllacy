@@ -17,21 +17,20 @@
 
             <nav class="main-navigation">
                 <ul class="secondary-navigation">
-                    <li class="secondary-navigation-dropdown">
-                        <a class="button" href="#">Каталог</a>
-                        <ul class="sub-menu">
-                            <li><h3>Новинки:</h3></li>
-                            <hr>
+                    <li class="main-navigation-item">
+                        <a class="main-navigation-link" href="#">Каталог</a>
+                        <ul class="sub-navigation-list">
+                            <li><a class="sub-navigation-header">Новинки:</a></li>
                             <li><a class="novelty-item" href="catalog.html">Сливочное</a></li>
                             <li><a class="novelty-item-chosen" href="#" selected>Щербеты</a></li>
                             <li><a class="novelty-item" href="#">Фруктовый лед</a></li>
                             <li><a class="novelty-item" href="#">Мелорин</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="main-navigation-item">
                         <a href="#">Доставка и оплата</a>
                     </li>
-                    <li>
+                    <li class="main-navigation-item">
                         <a href="#">О Компании</a>
                     </li>
                 </ul>
@@ -40,14 +39,14 @@
             <ul class="user-block">
                 <li>
                     <form class="search">
-                        <a class="button" href="#"></a>
                         <div>
-                            <input class="search-field" type="text" name="search" placeholder="Что ищем?" id="search">
+                            <input class="search-field" type="search" name="search" placeholder="Что ищем?" id="search">
                             <div class="label-box">
                                 <label class="visually-hidden" for="search">Поисковая строка</label>
                             </div>
                         </div>
                     </form>
+                    <a class="button" href="#"></a>
                 </li>
                 <li>
                     <a class="enter" href="#">
@@ -138,9 +137,6 @@
                 <h2 class="visually-hidden">Хиты продаж</h2>
                 <ul class="hit-list">
                     <li class="hit-item">
-                        <h3>
-                            <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                        </h3>
                         <p class="hit-image">
                             <img src="img\svg-gllacy\svg-gllacy\hit.svg">Хит</img>
                         </p>
@@ -150,13 +146,13 @@
                         <p class="hit-item-price">
                             310 <img src="img\svg-gllacy\svg-gllacy\ruble.svg"> <span class="weight">/кг</span>
                         </p>
+                        <h3>
+                            <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                        </h3>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
 
                     <li class="hit-item">
-                        <h3>
-                            <a href="img\index-images\small-ice-cream-2.jpg">Сливочно-кофейное с кусочками шоколада</a>
-                        </h3>
                         <p class="hit-image">
                             <img src="img\svg-gllacy\svg-gllacy\hit.svg">Хит</img>
                         </p>
@@ -166,13 +162,13 @@
                         <p class="hit-item-price">
                             380 <img src="img\svg-gllacy\svg-gllacy\ruble.svg"/<span class="weight">/кг</span>
                         </p>
+                        <h3>
+                            <a href="img\index-images\small-ice-cream-2.jpg">Сливочно-кофейное с кусочками шоколада</a>
+                        </h3>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
 
                     <li class="hit-item">
-                        <h3>
-                            <a href="catalog-item-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
-                        </h3>
                         <p class="hit-image">
                             <img src="img\svg-gllacy\svg-gllacy\hit.svg">Хит</img>
                         </p>
@@ -182,13 +178,13 @@
                         <p class="hit-item-price">
                             355 <img src="img\svg-gllacy\svg-gllacy\ruble.svg"> <span class="weight">/кг</span>
                         </p>
+                        <h3>
+                            <a href="catalog-item-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                        </h3>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
 
                     <li class="hit-item">
-                        <h3>
-                            <a href="catalog-item-4.html">Сливочное крем-брюле с карамельной подливкой</a>
-                        </h3>
                         <p class="hit-image">
                             <img src="img\svg-gllacy\svg-gllacy\hit.svg">Хит</img>
                         </p>
@@ -198,6 +194,9 @@
                         <p class="hit-item-price">
                             415 <img src="img\svg-gllacy\svg-gllacy\ruble.svg"> <span class="weight">/ кг</span>
                         </p>
+                        <h3>
+                            <a href="catalog-item-4.html">Сливочное крем-брюле с карамельной подливкой</a>
+                        </h3>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
@@ -228,7 +227,7 @@
             <aside>
                 <article class="blog-news">
                      <h2>Новое в нашем блоге</h2>
-                     <p>10 способов сервировки фруктовых щербетов к столу</p>
+                     <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
                 </article>
 
                 <article class="subscriprion">
@@ -259,34 +258,18 @@
                     Для заказов по телефону:
                     <span>8 812 450-25-25</span>
                             (с 10 до 20 ежедневно)</p>
-                    <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-                        <h2>Мы обязательно вам ответим!</h2>
-                        <p class="feedback-item">
-                            <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
-                            <input id="feedback-name" type="text" name="name" value="" placeholder="Ваше имя">
-                        </p>
-                        <p class="feedback-item">
-                            <label for="feedback-name" class="visually-hidden">Ваша почта для ответа?</label>
-                            <input id="feedback-name" type="email" name="name" value="" placeholder="Ваша почта для ответа?">
-                        </p>
-                        <p class="feedback-item">
-                            <label for="feedback-name" class="visually-hidden">Напишите что-нибудь...</label>
-                            <input id="feedback-name" type=text name="name" value="" placeholder="Напишите что-нибудь...">
-                        </p>
-                        <button class="button" type="submit">Отправить</button>
-                    </form>
+                    <a class="button" type="button" aria-label="Форма обратной связи">
                 </div>
             </section>
         </main>
 
         <footer class="page-footer">
-            <hr>
+
             <ul class="footer-social">
-                <img src="img\footer\social.svg">
-                <li class="social-btn" href="https://twitter.com/gglacey">Twitter</li>
-                <li class="social-btn" href="https://vk.com/gglacey">Вконтакте</li>
-                <li class="social-btn" href="https://www.facebook.com/gglacey">Facebook</li>
-                <li class="social-btn" href="https://www.instagram.com/gglacey">Instagram</li>
+                <li class="social-btn"><a href="https://twitter.com/gglacey">Twitter</a></li>
+                <li class="social-btn"><a href="https://vk.com/gglacey">Вконтакте</a></li>
+                <li class="social-btn"><a href="https://www.facebook.com/gglacey">Facebook</a></li>
+                <li class="social-btn"><a href="https://www.instagram.com/gglacey">Instagram</a></li>
             </ul>
 
             <ul class="footer-info">

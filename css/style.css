@@ -1,25 +1,23 @@
-body {
-    margin: 0;
-    padding: 0;
 
+body {
     font-family: Roboto, Arial, sans-serif;
-    font-weight: normal;
+    font-weight: 500px </*medium*/>;
+    text-align: left;
     color: rgb(255, 255, 255);
 
     background-color: rgb(132, 157, 143);
 }
 
-/*почему бы тут сразу не прописать, скажем, стиль списков - none, если все они - немаркированные?*/
-
 .button {
     font-family: inherit;
 
-    font-weight: bold;
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
+    font-weight: 700px;
     color: rgb(255, 255, 255);
 
-    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67)100%);
+    background-image: linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
@@ -41,106 +39,83 @@ body {
 /*шапка*/
 
 .main-header-logo {
-    background-image: url("img\header\Logo-Gllacey.svg");
-}
-
-.main-navigation {
-    font-size: 16px;
-    line-height: 18px;
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
+    background-image: url("img\logo.svg");
 }
 
 .main-navigation ul {
     list-style: none;
 }
 
-/*каталог*/
-
-.secondary-navigation-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.secondary-navigation .button {
+.main-navigation-item {
     font-size: 16px;
     line-height: 18px;
-
-    position: absolute;
+    font-weight: 700px;
+    text-decoration: underline;
 }
 
-.sub-menu: {
-    display: none;
+/*каталог*/
+
+.main-navigation-link {
+    position: relative;
 }
 
-.secondary-navigation .button:hover .sub-menu,
-.secondary-navigation .button:focus .sub-menu {
-    font-size: 14;
-    line-height: 16;
+.main-navigation-link:focus,
+.main-navigation-link:hover {
     color: rgb(50, 50, 50);
 
+    background-color: rgb(248, 247, 244);
+}
+
+.main-navigation-link:active {
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+.sub-navigation-list {
+    list-style: none;
     position: absolute;
-    display: none;
+}
+
+.sub-navigation-list a {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+
+    border: 1px solid #e5e5e5;
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     left: 359px;
     top: 282px;
     width: 143px;
-    height: 171px;
 }
 
-.secondary-navigation .sub-menu h3 {
-    font-weight: bold;
+.sub-navigation-header {
+    font-weight: 700px;
 }
 
-.secondary-navigation .sub-menu hr {
-    opacity: 0.2;
-    left: 365px;
-    top: 320px;
-    width: 128px;
-    height: 1px;
+.sub-navigation-list a:hover,
+.sub-navigation-list a:focus {
+    background: rgb(251, 222, 215);
 }
 
-.novelty-item-chosen:hover,
-.novelty-item-chosen:focus {
-    background-color: rgb(251, 222, 215);
+.sub-navigation-list a:active {
+    background: rgb(246, 181, 165);
 }
 
-.novelty-item-chosen:active {
-    background-color: rgb(246, 181, 165);
-}
-
-.novelty-item-chosen: current {
+/*когда находимся на странице, на которую ведет ссылка*/
+.sub-navigation-list .active a {
     color: rgb(255, 255, 255);
 
-    background-color: rgb(208, 112, 88);
-}
-
-.secondary-navigation:nth-child(2),
-.secondary-navigation:nth-child(3) {
-    font-size: 14;
-    line-height: 16;
-}
-
-.secondary-navigation:nth-child(2),
-.secondary-navigation:nth-child(3) {
-    font-size: 14;
-    line-height: 16;
-}
-
-.secondary-navigation:nth-child(2):hover,
-.secondary-navigation:nth-child(2):focus,
-.secondary-navigation:nth-child(3):hover,
-.secondary-navigation:nth-child(3):focus {
-    color: rgb(232, 77, 55);
+    background: rgb(208, 112, 88);
 }
 
 /*форма поиска*/
 
 .search {
     position: relative;
-    display: inline-block;
+    display: block;
 
     border-radius: 50%;
     opacity: 0.2;
@@ -149,38 +124,45 @@ body {
     width: 33px;
     height: 33px;
     background-color: rgb(161, 180, 169);
-    background: url(img\svg-gllacy\svg-gllacy\loupe.svg);
+    background-image: url("img\loupe.svg");
 }
 
-.search-field {
-    display: none;
-}
-
-.button:hover .search-field,
-.button:focus .search-field {
-    font-size: 14;
-    line-height: 24;
+.search:hover,
+.search:focus {
+    font-size: 14px;
+    line-height: 24px;
     color: rgb(153, 153, 153);
     text-align: left;
 
-    background: url(img\header\magnifier-hover.svg);
+    background: url(/*?*/);
     border-style: solid;
     border-width: 1px;
     border-color: rgb(211, 211, 210);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    position: absolute;
     left: 64px;
     top: 766px;
     width: 313px;
     height: 46px;
 }
 
-.button:hover .search-field input,
-.button:focus .search-field input {
-    font-size: 16;
-    line-height: 24;
-    color: rgb(50, 50, 50);
+.search:hover .search-field,
+.search:focus .search-field {
+    border-radius: 6px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 51px;
+    top: 748px;
+    width: 341px;
+    height: 84px;
+}
+
+.search-field input {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400px;
+    color: rgb(153, 153, 153);
     text-align: left;
 
     border-style: solid;
@@ -188,20 +170,19 @@ body {
     border-color: rgb(211, 211, 210);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    position: absolute;
     left: 64px;
     top: 766px;
     width: 313px;
     height: 46px;
 }
 
-.button:hover .search-field placeholder,
+/*.button:hover .search-field placeholder,
 .button:focus .search-field placeholder {
-    font-size: 16;
-    line-height: 24;
+    font-size: 16px;
+    line-height: 24px;
     color: rgb(153, 153, 153);
     text-align: left;
-}
+}*/
 
 .search-field input:hover,
 .search-field input:focus {
@@ -215,6 +196,12 @@ body {
   }
 
   .search-field input:active {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
+    color: rgb(50, 50, 50);
+    text-align: left;
+
     border-width: 2px;
     border-color: rgb(211, 211, 210);
     pacity: 0.52;
@@ -224,21 +211,27 @@ body {
     height: 44px;
  }
 
-.enter a {
-    font-size: 14;
-    line-height: 16;
-    color: rgb(255, 255, 255);
+/*форма входа*/
 
-    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
+.enter a {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
     position: relative;
-    display: inline-block;
+
+    background-image: url("img\entrance.svg");
+    background-color: rgb(161, 180, 169);
+    opacity: 0.2;
+    left: 669px;
+    top: 660px;
+    width: 93px;
+    height: 32px;
 }
 
 .enter a:hover,
 .enter a:focus {
-    color: rgb(248, 247, 244);
-
-    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
+    background-color: rgb(248, 247, 244);
+    background-image: url(/*?*/);
 }
 
 .enter a:hover .login-form,
@@ -253,9 +246,10 @@ body {
     height: 214px;
 }
 
-.enter-field input {
-    font-size: 16;
-    line-height: 24;
+.enter-field input[type="email"],
+.enter-field input[type="password"] {
+    font-size: 16px;
+    line-height: 24px;
     color: rgb(50, 50, 50);
     text-align: left;
 
@@ -283,6 +277,12 @@ body {
   }
 
 .enter-field input:active {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
+    color: rgb(50, 50, 50);
+    text-align: left;
+
     border-width: 2px;
     border-color: rgb(211, 211, 210);
     opacity: 0.52;
@@ -292,127 +292,52 @@ body {
     height: 44px;
 }
 
-.enter a:hover .login-form placeholder,
-.enter a:focus .login-form placeholder: {
-    font-size: 16;
-    line-height: 24;
+/*.enter a:hover .login-form placeholder,
+.enter a:focus .login-form placeholder {
+    font-size: 16px;
+    line-height: 24px;
     color: rgb(153, 153, 153);
     text-align: left;
-}
+}*/
 
-.login-form, a {
-    font-size: 14;
-    line-height: 16;
+.login-form a {
+    font-size: 14px;
+    line-height: 16px;
     color: rgb(50, 50, 50)
     text-decoration: underline;
 }
 
-.login-form, a:hover,
-.login-form, a:focus {
+.login-form a:hover,
+.login-form a:focus {
     color: rgb(232, 77, 55);
-}
-
-/*форма входа*/
-
-.enter {
-    font-size: 14;
-    line-height: 16;
-    color: rgb(255, 255, 255);
-
-    background-color: rgb(248, 247, 244);
-    background-image: url(img\svg-gllacy\svg-gllacy\entrance.svg);
-    position: relative;
-    display: inline-block;
-}
-
-.login-form {
-  display: none;
-}
-
-.enter:hover .login-form,
-.enter:focus .login-form {
-    font-size: 14;
-    line-height: 24;
-    color: rgb(153, 153, 153);
-    text-align: left;
-
-    background-color: rgb(153, 153, 153);
-    background-image: url(img\header\etrance-hover.svg);
-    position: absolute;
-}
-
-.enter input {
-    font-size: 14;
-    line-height: 24;
-    color: rgb(153, 153, 153);
-    text-align: left;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(211, 211, 210);
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    left: 501px;
-    top: 766px;
-    width: 243px;
-    height: 46px;
-}
-
-.login-form a {
-    font-size: 14;
-    line-height: 24;
-    color: rgb(153, 153, 153);
-    text-decoration: underline;
-}
-
-.login-form .button {
-    font-size: 13;
-    line-height: 24;
-    color: rgb(50, 50, 50);
-    text-align: left;
-    text-decoration: underline;
-
-    bacground-color: rgb(255, 255, 255);
 }
 
 /*Корзина*/
 
-.basket .basket-button  {
-    font-size: 14;
-    line-height: 16;
+.basket {
+    font-size: 14px;
+    line-height: 16px;
 
     background-color: rgb(157, 177, 165);
     opacity: 0.2;
-    background: url(img\svg-gllacy\svg-gllacy\basket.svg);
+    background-image: url("img\basket.svg");
     position: relative;
-    display: inline-block;
     left: 1056px;
     top: 23px;
     width: 117px;
     height: 32px;
 }
 
-.basket .basket-button:focus,
-.basket .basket-button:active {
-    color: rgb(50, 50, 50);
-    background: url(img\svg-gllacy\svg-gllacy\basket-red.svg);
-}
-
 .basket:focus,
-.basket-active {
+.basket:active {
     color: rgb(50, 50, 50);
 
-    background: url(img\header\basket-hover.svg);
-    bacground-color: rgb(247, 246, 243);
-}
-
-.basket-table {
-    display: none;
+    background-color: rgb(248, 247, 244);
+    background-image: url("img\basket-red.svg");
 }
 
 .basket:focus .basket-table,
-.basket-active .basket-table {
+.basket:active .basket-table {
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -423,6 +348,32 @@ body {
     height: 242px;
 }
 
+.basket-table .close {
+    background-image: url("img\cross-small.svg");
+}
+
+.basket-table .basket-table-item-1 {
+    background-image: url("img\bascket-ice-cream-1.png");
+}
+
+.basket-table .basket-table-item-2 {
+    background-image: url("img\bascket-ice-cream-2.png");
+}
+
+.basket-table td {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400px;
+    color: rgb(50, 50, 50);
+    text-align: left;
+}
+
+.basket-table span {
+    color: rgb(161, 180, 169)
+}
+
+/*разделитель
+
 .basket:focus .basket-table hr,
 .basket-active .basket-table hr {
     color: rgb(247, 246, 243);
@@ -431,28 +382,28 @@ body {
     top: 878px;
     width: 510px;
     height: 1px;
-}
+}*/
 
 /*телефон и часы работы*/
 
 .header-time-phone {
-    font-size: 14;
-    line-height: 16;
+    font-size: 14px;
+    line-height: 16px;
     text-align: right;
 }
 
 .header-time-phone span {
-    font-size: 22;
-    line-height: 24;
+    font-size: 22px;
+    line-height: 24px;
 }
 
 /*слайдер, пока не доделала*/
 
 .promo {
-    font-weight: bold;
+    font-weight: 700px;
     text-align: center;
 
-    : url("img\index-images\ice-cream-big.jpg");
+    background-image: url("img\index-images\ice-cream-big.jpg");
 }
 
 .slides-switches {
@@ -469,12 +420,12 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.slides-switches:nth-child(1):hover;
+.slides-switches:nth-child(1):hover,
 .slides-switches:nth-child(1):focus {
     background-color: rgb(255, 255, 255);
 }
 
-.slides-switches:nth-child(2):hover;
+.slides-switches:nth-child(2):hover,
 .slides-switches:nth-child(2):focus {
     background-color: rgb(178, 193, 183);
 }
@@ -484,13 +435,14 @@ body {
 }
 
 .promo p {
-    font-size: 60;
-    line-height: 60,35;
+    font-size: 60px;
+    line-height: 60,35px;
+    text-aligh: center;
 }
 
 .promo a {
-    font-size: 32;
-    line-height: 44;
+    font-size: 32px;
+    line-height: 44px;
     color: rgb(255, 255, 255);
 
     left: 460px;
@@ -502,23 +454,22 @@ body {
 /*малинки-шоколадки*/
 
 .action-item {
-    font-weight: bold;
-    text-align: left;
+    font-weight: 700px;
 }
 
 .action-item h2 {
-    font-size: 35;
-    line-height: 41;
+    font-size: 35px;
+    line-height: 41px;
 }
 
 .action-item p {
-    font-size: 18;
-    line-height: 22;
+    font-size: 18px;
+    line-height: 22px;
 }
 
-.action-item, a {
-    font-size: 18;
-    line-height: 22;
+.action-item a {
+    font-size: 18px;
+    line-height: 22px;
 
     left: 401px;
     top: 807px;
@@ -528,14 +479,14 @@ body {
 
 .action-item-raspberry {
     background-color: rgb(145, 1, 29);
-    background-image: url("img\index-images\raspberry.png");
+    background-image: url("img\raspberry.png");
     background-position: left center;
     background-repeat: no-repeat;
 }
 
 .action-item-chocolate {
     background-color: rgb(93, 48, 25)
-    background-image: url("img\index-images\chocolate.png");
+    background-image: url("img\chocolate.png");
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -543,38 +494,37 @@ body {
 /*мороженое, хиты*/
 
 .hit-list {
-    position: relative;
-    display: inline-block;
     list-style: none;
 }
 
-.hit-items p {
-    font-size: 45;
-    line-height: 45;
-    font-weight: bold;
+.hit-item {
+    postioin: relative;
+}
+
+.hit-item-price {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700px;
     text-align: left;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+
+    background-image: url("img\ruble.svg");
 }
 
-.hit-items span {
-    font-size: 30;
-    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-}
-
-.hit-items button {
-    display: none;
+.hit-item-price span {
+    font-size: 30px;
 }
 
 .hit-items a {
-    font-size: 16;
-    line-height: 22;
+    font-size: 16px;
+    line-height: 22px;
     color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: underline;
 }
 
 .hit-items:hover,
-.hit-items:focus: {
+.hit-items:focus {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     opacity: 0.2;
@@ -587,7 +537,7 @@ body {
 }
 
 .hit-items:hover button,
-.hit-items:focus button: {
+.hit-items:focus button {
     position: absolute;
     left: 412px;
     top: 2055px;
@@ -600,9 +550,10 @@ body {
 .production {
     color: rgb(50, 50, 50);
     text-align: left;
+    font-weight: 400px;
 
-    background-image: url("img\index-images\waffle.png");
-    background-position: 50% 50%;;
+    background-image: url("img\waffle.png");
+    background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
@@ -618,11 +569,10 @@ body {
     list-style: none;
 }
 
-/*новости и подписка*/
+/*новости блога*/
 
 .aside {
     color: rgb(50, 50, 50);
-    text-align: left;
 }
 
 .blog-news {
@@ -632,38 +582,41 @@ body {
     background-repeat: no-repeat;
 }
 
-.blog-news, h2 {
-    font-size: 16;
-    line-height: 22;
+.blog-news h2 {
+    font-size: 16px;
+    line-height: 22px;
 }
 
-.blog-news, p {
-    font-size: 24;
-    line-height: 30;
-    font-weight: bold;
+.blog-news a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700px;
     text-decoration: underline;
 }
 
-.blog-news, p:hover,
-.blog-news, p:focus {
+.blog-news a:hover,
+.blog-news a:focus {
     color: rgb(232, 77, 55);
 }
 
-.subscription {
-    font-size: 16;
-    line-height: 22;
+/*подписка*/
 
-    background-image: rgb(255, 255, 255), url(https://img\svg-gllacy\svg-gllacy\bg-post.svg);
-    background-blend-mode: normal;
-    background-color: rgb(255, 255, 255);
+.subscription {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400px;
+
+    background-image: rgb(255, 255, 255), url("img\bg-post.svg");
+    background-blend-mode: 400px;
+    background-color: rgb(248, 247, 244);
     background-position: right center;
-    background-repeat: no-repeat;
 }
 
-.subscription label {
-    font-size: 16;
-    line-height: 24;
-    color: rgb(50, 50, 50);
+.subscription input {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(153, 153, 153);
+    font-weight: 400px;
 
     border-style: solid;
     border-width: 1px;
@@ -677,14 +630,35 @@ body {
     height: 46px;
 }
 
-.subscription placeholder {
-    color: rgb(153, 153, 153);
+.subscription input:hover {
+    border-width: 2px;
+    border-color: rgb(154, 154, 154);
+    left: 857px;
+    top: 2542px;
+    width: 267px;
+    height: 44px;
+}
+
+.subscription input: focus;
+.subscription input: active {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
+    color: rgb(50, 50, 50);
+    text-align: left;
+
+    border-width: 2px;
+    border-color: rgb(46, 136, 228);
+    left: 857px;
+    top: 2606px;
+    width: 267px;
+    height: 44px;
 }
 
 .subscription button {
-    font-size: 18;
-    line-height: 24;
-    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700px;
 
     left: 1018px;
     top: 1759px;
@@ -697,51 +671,46 @@ body {
 .location {
     color: rgb(50, 50, 50);
 
-    background-color: rgb(255, 255, 255);
-    background-image: url("img\index-images\map.png");
+    background-color: rgb(247, 241, 217);
+    background-image: url("img\map.png");
     background-repeat: no-repeat;
 }
 
-.location .location-map {
+.location-map {
   background-image: url("img\svg-gllacy\svg-gllacy\pin.svg"), url("img\index-images\map.png");
-  background-blend-mode: normal;
+  background-blend-mode: 400px;
 }
 
 .location p {
-    font-size: 14;
-    line-height: 20;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400px;
+    color: url(50, 50, 50);
 }
 
 .location span {
-    font-size: 18;
-    line-height: 22;
-    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700px;
 }
 
 .location button {
-    font-size: 18;
-    line-height: 24;
-    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700px;
 
+    position: relative;
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     left: 896px;
     top: 2176px;
     width: 252px;
     height: 44px;
-    position: relative;
-    display: inline-block;
 }
 
 /*форма обратной связи*/
 
-.feedback {
-    display: none;
-}
-
-.location button:hover .feedback,
-.location button:focus .feedback {
+.location a:active .feedback {
     background-color: rgb(248, 247, 244);
-    position: absolute;
 
     border-radius: 10px;
     background-color: rgb(248, 247, 244);
@@ -752,17 +721,15 @@ body {
     height: 443px;
 }
 
-.feedback h2,
 .feedback h2 {
-    font-size: 24;
-    line-height: 28;
+    font-size: 24px;
+    line-height: 28px;
     color: rgb(50, 50, 50);
 }
 
-.feedback .input,
 .feedback .input {
-    font-size: 16;
-    line-height: 24;
+    font-size: 16px;
+    line-height: 24px;
     color: rgb(153, 153, 153);
 
     border-style: solid;
@@ -776,11 +743,11 @@ body {
     height: 46px;
 }
 
-.feedback input:hover;
+.feedback input:hover,
 .feedback input:focus {
-    font-size: 16;
-    line-height: 24;
-    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
     color: rgb(50, 50, 50);
 
     border-width: 2px;
@@ -791,16 +758,11 @@ body {
 }
 
 .feedback input:active {
-    border-width: 2px;
-    border-color: rgb(46, 136, 228);
-    background-color: rgb(255, 255, 255);
-    top: 2606px;
-    width: 267px;
-    height: 44px;
-}
-
-.feedback placeholder {
-    color: rgb(153, 153, 153);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
+    color: rgb(50, 50, 50);
+    text-align: left;
 }
 
 .feedback .button {
@@ -813,8 +775,9 @@ body {
 /*подвал*/
 
 .footer-info {
-    font-size: 13;
-    line-height: 28;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 400px;
     color: rgb(255, 255, 255);
     text-decoration: underline;
     list-style: none;
@@ -826,75 +789,76 @@ body {
 }
 
 .footer-info span {
-    font-weight: bold;
+    font-weight: 700px;
 }
 
 .footer-copyright {
-    font-size: 12;
-    line-height: 18;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400px;
+
+    background-image: url("img\logo-htmlacademy.svg");
 }
 
-.footer-copyright, a {
+.footer-copyright a {
     color: rgb(255, 255, 255);
     text-decoration: underline;
 }
 
-.footer-copyright, a:hover,
-.footer-copyright, a:focus {
+.footer-copyright a:hover,
+.footer-copyright a:focus {
     color: rgb(255, 188, 158);
 }
 
 /*КАТАЛОГ*/
 
 .breadcrumbs {
-    font-size: 14;
-    line-height: 16;
+    font-size: 14px;
+    line-height: 16px;
     color: rgb(255, 255, 255);
+    font-weight: 400px;
 
     list-style: none;
     text-decoration: underline;
 }
 
-.breadcrumbs:current {
+.breadcrumbs-current {
     text-decoration: none;
 }
 
 .page-title {
-    font-size: 35;
-    line-height: 41;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700px;
 }
 
 /*фильтры*/
 
-.filters .fieldset {
-    border: none;
-}
-
-.filters {
-    font-size: 16;
-    line-height: 18;
-    text-transform: lowercase;
+.filter fieldset {
+  border: none;
 }
 
 .filters label {
-    font-size: 14;
-    line-height: 16;
+    font-size: 14px;
+    line-height: 16px;
 }
 
-.filter-sorting {
+.filter-sorting-options {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: lowercase;
+
     background-color: rgb(248, 247, 244);
     opacity: 0.2;
     left: 27px;
     top: 207px;
     width: 194px;
     height: 37px;
-    background: url(img\svg-gllacy\svg-gllacy\select-arrow.svg);
+    background: url("img\select-arrow.svg");
 }
 
-.filter-sorting:hover,
-.filter-sorting:focus {
+.filter-sorting-options:hover,
+.filter-sorting-options:focus {
     color: rgb(50, 50, 50);
 }
 
@@ -908,16 +872,15 @@ body {
     height: 37px;
 }
 
-/*?*/
+/*Эта штука пока совсем непонятна*/
 .filter-price button:hover {
-    cursor: pointer
-    background: url(img\svg-gllacy\svg-gllacy\filter-button.svg);
+    cursor: pointer;
+    background-image: url("img\filter-button.svg");
 }
 
 .filter-fatness {
     background-color: rgb(255, 255, 255);
     opacity: 0.2;
-    position: absolute;
     left: 469px;
     top: 207px;
     width: 415px;
@@ -926,11 +889,11 @@ body {
 }
 
 .filter-input-radio + label {
-    background: url(img\svg-gllacy\svg-gllacy\radio-off.svg);
+    background-image: url("img\radio-off.svg");
 }
 
 .filter-input-radio:active {
-    background: url(img\svg-gllacy\svg-gllacy\radio-on.svg);
+    background-image: url("img\radio-on.svg");
 }
 
 /*?*/
@@ -949,11 +912,11 @@ body {
 }
 
 .filter-input-checkbox + label {
-    background: url(img\svg-gllacy\svg-gllacy\checkbox-off.svg);
+    background-image: url("img\checkbox-off.svg");
 }
 
 .filter-input-checkbox:active {
-    background: url(img\svg-gllacy\svg-gllacy\checkbox-on.svg);
+    background-image: url("img\checkbox-on.svg");
 }
 
 /*?*/
@@ -962,8 +925,8 @@ body {
 }
 
 .filter-button {
-    font-size: 16;
-    line-height: 18;
+    font-size: 16px;
+    line-height: 18px;
 
     border-style: solid;
     border-width: 2px;
@@ -990,6 +953,14 @@ body {
 
 /*Товары*/
 
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+    position: relative;
+}
+
 .catalog-item:hover,
 .catalog-item:focus {
     border-radius: 5px;
@@ -1004,23 +975,25 @@ body {
 }
 
 .catalog-item-price {
-    font-size: 45;
-    line-height: 45;
-    font-weight: bold;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700px;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+
+    background-image: url("img\ruble.svg");
 }
 
 .catalog-item-price span {
-    font-size: 30;
-    line-height: 45;
-    font-weight: bold;
+    font-size: 30px;
 }
 
 .catalog-list a {
-    font-size: 16;
-    line-height: 22;
-    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700px;
     color: rgb(255, 255, 255);
     list-style: none;
+    text-decoration: underline;
 }
 
 .catalog-list a:hover,
@@ -1029,21 +1002,9 @@ body {
 }
 
 .pagination-list {
-    font-size: 16;
-    line-height: 18;
+    font-size: 16px;
+    line-height: 18px;
     color: rgb(255, 255, 255);
-}
-
-.pagination-list:current,
-.pagination-list:active {
-    color: rgb(50, 50, 50);
-
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    left: 1065px;
-    top: 2267px;
-    width: 27px;
-    height: 26px;
 }
 
 .pagination-list:hover,
@@ -1055,9 +1016,21 @@ body {
     top: 2320px;
     width: 27px;
     height: 26px;
-    cursor: pointer
+    cursor: pointer;
 }
 
+.pagination-item-current {
+    color: rgb(50, 50, 50);
+
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    left: 1065px;
+    top: 2267px;
+    width: 27px;
+    height: 26px;
+}
+
+/*разделитель*
 .page-footer hr {
     background-color: rgb(255, 255, 255);
     opacity: 0.302;
@@ -1065,4 +1038,4 @@ body {
     top: 1542px;
     width: 1146px;
     height: 1px;
-}
+}/
