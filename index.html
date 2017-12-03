@@ -5,89 +5,96 @@
         <title>HTML Academy: Глейси</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/outline.css" rel="stylesheet"> <!--сделать!-->
         <link href="css/style.css" rel="stylesheet">
         <meta name="keywords" content="Gllacy, Глэйси, мороженое на развес, крем-брюле, пломбир, щербет">
         <meta name="description" content="Магазин Глэйси - онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес">
     </head>
     <body>
         <header class="main-header">
-            <a class="main-header-logo">
-                <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип Gllacy Shop">
-            </a>
+            <div class="container-upper">
+                <a class="main-header-logo">
+                    <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип Gllacy Shop">
+                </a>
 
-            <nav class="main-navigation">
-                <ul class="secondary-navigation">
-                    <li class="main-navigation-item">
-                        <a class="main-navigation-link" href="#">Каталог</a>
-                        <ul class="sub-navigation-list">
-                            <li><a class="sub-navigation-header">Новинки:</a></li>
-                            <li><a class="novelty-item" href="catalog.html">Сливочное</a></li>
-                            <li><a class="novelty-item-chosen" href="#" selected>Щербеты</a></li>
-                            <li><a class="novelty-item" href="#">Фруктовый лед</a></li>
-                            <li><a class="novelty-item" href="#">Мелорин</a></li>
+                <div class="main-navigation-wrapper">
+                    <nav class="main-navigation">
+                        <ul class="secondary-navigation">
+                            <li class="main-navigation-item">
+                                <a class="main-navigation-link" href="#">Каталог</a>
+                                <ul class="sub-navigation-list">
+                                    <li><a class="sub-navigation-header">Новинки:</a></li>
+                                    <li><a class="novelty-item" href="catalog.html">Сливочное</a></li>
+                                    <li><a class="novelty-item-chosen" href="#" selected>Щербеты</a></li>
+                                    <li><a class="novelty-item" href="#">Фруктовый лед</a></li>
+                                    <li><a class="novelty-item" href="#">Мелорин</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-navigation-item">
+                                <a href="#">Доставка и оплата</a>
+                            </li>
+                            <li class="main-navigation-item">
+                                <a href="#">О Компании</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="main-navigation-item">
-                        <a href="#">Доставка и оплата</a>
-                    </li>
-                    <li class="main-navigation-item">
-                        <a href="#">О Компании</a>
-                    </li>
-                </ul>
-            </nav>
+                    </nav>
 
-            <ul class="user-block">
-                <li>
-                    <form class="search">
-                        <div>
-                            <input class="search-field" type="search" name="search" placeholder="Что ищем?" id="search">
-                            <div class="label-box">
-                                <label class="visually-hidden" for="search">Поисковая строка</label>
-                            </div>
-                        </div>
-                    </form>
-                    <a class="button" href="#"></a>
-                </li>
-                <li>
-                    <a class="enter" href="#">
-                        <!--картинку пока оставила--><img class="enter-picture"src="img\svg-gllacy\svg-gllacy\entrance.svg"/>
-                        Вход
-                    </a>
-                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                        <button class="button-enter" type="button">
-                            <!--картинку пока оставила--><img class="enter-picture"src="img\header\entrance.svg"/>
-                            Вход
-                        </button>
-                        <div>
-                            <input class="user-email" type="email" name="email" placeholder="Электронная почта" id="email">
-                            <div class="label-box">
-                                <label for="email" class="visually-hidden">Электронная почта</label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="password" name="password" placeholder="Пароль" id="password">
-                            <div class="label-box">
-                                <label for="password" class="visually-hidden">Пароль</label>
-                            </div>
-                        </div>
-                        <a class="login-form-restore" href="#">Забыли пароль?</a>
-                        <a class="login-form-new-registration" href="#">Новая регистрация</a>
-                        <button class="button" type="submit">Войти</button>
-                    </form>
-                </li>
-                <li>
-                    <form class="basket">
-                        <h2="visually-hidden">Корзина</h2>
-                        <a class="basket-button">Пусто</a>
-                            <!--картинку пока оставила--><img class="basket-picture"src="img\header\basket.svg"/>
-                    </form>
-                </li>
-            </ul>
+                    <ul class="user-block">
+                        <li>
+                            <form class="search">
+                                <div>
+                                    <input class="search-field" type="search" name="search" placeholder="Что ищем?" id="search">
+                                    <div class="label-box">
+                                        <label class="visually-hidden" for="search">Поисковая строка</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="button" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="enter" href="#">
+                                <!--картинку пока оставила--><img class="enter-picture"src="img\svg-gllacy\svg-gllacy\entrance.svg"/>
+                                Вход
+                            </a>
+                            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                                <button class="button-enter" type="button">
+                                    <!--картинку пока оставила--><img class="enter-picture"src="img\header\entrance.svg"/>
+                                    Вход
+                                </button>
+                                <div>
+                                    <input class="user-email" type="email" name="email" placeholder="Электронная почта" id="email">
+                                    <div class="label-box">
+                                        <label for="email" class="visually-hidden">Электронная почта</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input type="password" name="password" placeholder="Пароль" id="password">
+                                    <div class="label-box">
+                                        <label for="password" class="visually-hidden">Пароль</label>
+                                    </div>
+                                </div>
+                                <a class="login-form-restore" href="#">Забыли пароль?</a>
+                                <a class="login-form-new-registration" href="#">Новая регистрация</a>
+                                <button class="button" type="submit">Войти</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="basket">
+                                <h2="visually-hidden">Корзина</h2>
+                                <a class="basket-button">Пусто</a>
+                                <!--картинку пока оставила--><img class="basket-picture"src="img\header\basket.svg"/>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <p class="header-time-phone">
-                C 10 до 20, ежедневно
-                <span>8 812 450-25-25</span>
-            </p>
+            <div class="container-lower">
+                <p class="header-time-phone">
+                    C 10 до 20, ежедневно
+                    <span>8 812 450-25-25</span>
+                </p>
+            </div>
         </header>
 
         <main class="container">
@@ -203,28 +210,38 @@
 
             <section class="production">
                 <h2 class="visually-hidden">О нашей продукции</h2>
-                <p class="lead">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-                <ul>
-                    <li>
-                        <img src="img\svg-gllacy\svg-gllacy\hit.svg">
-                        Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-                    </li>
-                    <li>
-                         <img src="img\svg-gllacy\svg-gllacy\eco.svg">
-                         Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
-                    </li>
-                    <li>
-                        <img src="img\svg-gllacy\svg-gllacy\cow.svg">
-                        Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-                    </li>
-                    <li>
-                        <img src="img\svg-gllacy\svg-gllacy\thermometer.svg">
-                        Доставка нашего мороженого осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет сохранять превосходный вкус.
-                    </li>
-                </ul>
+                <div class="lead">
+                    <p class="lead">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+                </div>
+                <div class="production-items">
+                    <div class="production-left">
+                        <ul>
+                            <li>
+                                <img src="img\svg-gllacy\svg-gllacy\hit.svg">
+                                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                            </li>
+                            <li>
+                                 <img src="img\svg-gllacy\svg-gllacy\eco.svg">
+                                 Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="production-right">
+                        <ul>
+                            <li>
+                                <img src="img\svg-gllacy\svg-gllacy\cow.svg">
+                                Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                            </li>
+                            <li>
+                                <img src="img\svg-gllacy\svg-gllacy\thermometer.svg">
+                                Доставка нашего мороженого осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет сохранять превосходный вкус.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <aside>
+            <aside class="news">
                 <article class="blog-news">
                      <h2>Новое в нашем блоге</h2>
                      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
@@ -248,10 +265,12 @@
             <section class="location">
                 <p class="location-map">
                     <img src="img\index-images\map.png">
-                    <img src="<img src="img\svg-gllacy\svg-gllacy\pin.svg">
+                    <div class="pin">
+                        <img src="<img src="img\svg-gllacy\svg-gllacy\pin.svg">
+                    </div>
                 </p>
                 <h2 class="visually-hidden">Контактная информация</h2>
-                <div>
+                <div class="location-contacts">
                     <p>Адрес главного офиса
                              и офлайн магазина:
                     <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
