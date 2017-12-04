@@ -12,12 +12,12 @@
     </head>
     <body>
         <header class="main-header">
-            <div class="container-upper">
-                <a class="main-header-logo">
-                    <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип Gllacy Shop">
-                </a>
+            <div class="container">
+                <div class="main-header-wrapper">
+                    <a class="main-header-logo">
+                        <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип Gllacy Shop">
+                    </a>
 
-                <div class="main-navigation-wrapper">
                     <nav class="main-navigation">
                         <ul class="secondary-navigation">
                             <li class="main-navigation-item">
@@ -34,7 +34,7 @@
                                 <a href="#">Доставка и оплата</a>
                             </li>
                             <li class="main-navigation-item">
-                                <a href="#">О Компании</a>
+                                <a class "about-the-company" href="#">О Компании</a>
                             </li>
                         </ul>
                     </nav>
@@ -87,13 +87,14 @@
                         </li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="container-lower">
-                <p class="header-time-phone">
-                    C 10 до 20, ежедневно
-                    <span>8 812 450-25-25</span>
-                </p>
+                <div class="header-time-phone-wrapper">
+                    <p class="header-time-phone">
+                        C 10 до 20, ежедневно
+                        <span>8 812 450-25-25</span>
+                    </p>
+                </div>
+
             </div>
         </header>
 
@@ -209,34 +210,36 @@
                 </ul>
 
             <section class="production">
-                <h2 class="visually-hidden">О нашей продукции</h2>
-                <div class="lead">
-                    <p class="lead">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-                </div>
-                <div class="production-items">
-                    <div class="production-left">
-                        <ul>
-                            <li>
-                                <img src="img\svg-gllacy\svg-gllacy\hit.svg">
-                                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-                            </li>
-                            <li>
-                                 <img src="img\svg-gllacy\svg-gllacy\eco.svg">
-                                 Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
-                            </li>
-                        </ul>
+                <div class="container">
+                    <h2 class="visually-hidden">О нашей продукции</h2>
+                    <div class="lead">
+                        <p class="lead">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                     </div>
-                    <div class="production-right">
-                        <ul>
-                            <li>
-                                <img src="img\svg-gllacy\svg-gllacy\cow.svg">
-                                Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-                            </li>
-                            <li>
-                                <img src="img\svg-gllacy\svg-gllacy\thermometer.svg">
-                                Доставка нашего мороженого осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет сохранять превосходный вкус.
-                            </li>
-                        </ul>
+                    <div class="production-columns">
+                        <div class="production-column-left">
+                            <ul>
+                                <li class="production-item-top-left">
+                                    <img src="img\svg-gllacy\svg-gllacy\hit.svg">
+                                    Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                                </li>
+                                <li class="production-item-bottom-left">
+                                     <img src="img\svg-gllacy\svg-gllacy\eco.svg">
+                                     Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="production-column-right">
+                            <ul>
+                                <li class="production-item-top-right">
+                                    <img src="img\svg-gllacy\svg-gllacy\cow.svg">
+                                    Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                                </li>
+                                <li class="production-item-bottom-right">
+                                    <img src="img\svg-gllacy\svg-gllacy\thermometer.svg">
+                                    Доставка нашего мороженого осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет сохранять превосходный вкус.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -283,36 +286,37 @@
         </main>
 
         <footer class="page-footer">
+            <div class="container">
+                <ul class="footer-social">
+                    <li class="social-btn"><a href="https://twitter.com/gglacey">Twitter</a></li>
+                    <li class="social-btn"><a href="https://vk.com/gglacey">Вконтакте</a></li>
+                    <li class="social-btn"><a href="https://www.facebook.com/gglacey">Facebook</a></li>
+                    <li class="social-btn"><a href="https://www.instagram.com/gglacey">Instagram</a></li>
+                </ul>
 
-            <ul class="footer-social">
-                <li class="social-btn"><a href="https://twitter.com/gglacey">Twitter</a></li>
-                <li class="social-btn"><a href="https://vk.com/gglacey">Вконтакте</a></li>
-                <li class="social-btn"><a href="https://www.facebook.com/gglacey">Facebook</a></li>
-                <li class="social-btn"><a href="https://www.instagram.com/gglacey">Instagram</a></li>
-            </ul>
+                <ul class="footer-info">
+                    <li>
+                      <img src="img\svg-gllacy\svg-gllacy\heart.svg">
+                      <span><a href="#">Для поставщиков</a></span>
+                    </li>
+                    <li>
+                        <a href="#">О производстве</a>
+                    </li>
+                    <li>
+                        <a href="#">Наши документы</a>
+                    </li>
+                    <li>
+                        <a href="#">Экологические стандарты</a>
+                    </li>
+                </ul>
 
-            <ul class="footer-info">
-                <li>
-                  <img src="img\svg-gllacy\svg-gllacy\heart.svg">
-                  <span><a href="#">Для поставщиков</a></span>
-                </li>
-                <li>
-                    <a href="#">О производстве</a>
-                </li>
-                <li>
-                    <a href="#">Наши документы</a>
-                </li>
-                <li>
-                    <a href="#">Экологические стандарты</a>
-                </li>
-            </ul>
-
-            <p class="footer-copyright">
-                <a class="main-footer-logo">
-                    <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип HTML Academy">
-                </a>
-                Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
-            </p>
+                <p class="footer-copyright">
+                    <a class="main-footer-logo">
+                        <img src="img\svg-gllacy\svg-gllacy\logo-htmlacademy.svg" alt="Логотип HTML Academy">
+                    </a>
+                    Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+                </p>
+            </div>
         </footer class="page-footer">
 
         <section>
