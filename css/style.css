@@ -83,20 +83,16 @@ input[type="radio"].visually-hidden {
 /*шапка*/
 
 .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    margin-bottom: 0px;
-
     background-color: rgb(132, 157, 143);
 }
 
 .main-header-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1146px;
-    margin-bottom: 2px;
+    width: 100%;
+    margin: 0;
+    margin-top: 17px;
+    margin-bottom: 19px;
 }
 
 .main-header-logo {
@@ -107,8 +103,9 @@ input[type="radio"].visually-hidden {
 
 .secondary-navigation {
     display: flex;
-    flex-wrap: wrap;
-    width: 349px;
+    justify content: space-between;
+
+    width: 380px;
     margin: 0;
     margin-top: 31px;
     padding: 0;
@@ -230,7 +227,7 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px solid rgb(240, 239, 236);
 }
 
-.sub-navigation-list a:nth-child(2n) {
+.sub-navigation-list a:nth-child(2) {
     margin-top: 11px;
 }
 
@@ -261,7 +258,6 @@ input[type="radio"].visually-hidden {
 
 .user-block {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     width: 262px;
@@ -407,10 +403,10 @@ input[type="radio"].visually-hidden {
 }
 
 .userblock .enter {
+    display: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
 
     width: 240px;
     margin-top: 4px;
@@ -426,6 +422,10 @@ input[type="radio"].visually-hidden {
     border-radius: 6px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.userblock > li:hover .enter {
+    display: block;
 }
 
 .enter-field input[type="email"],
@@ -512,51 +512,77 @@ input[type="radio"].visually-hidden {
 
 .basket a {
     position: relative;
-    width: 57px;
-    padding-left: 454px;
-    padding-right: 16px;
+
+    width: 38px;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 34px;
     padding-top: 9px;
     padding-bottom: 8px;
 
     font-size: 14px;
     line-height: 16px;
 
-    background-color: rgba(157, 177, 165, 0.2);
-    background-image: url("img/basket.svg");
+    background-color: rgb(167, 185, 175);
+    background-image: url("img\basket.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
-.basket:focus,
-.basket:active {
+.basket a::before {
+    content: "";
+
+    position: absolute;
+    bottom: 14px;
+    right: 29px;
+
+    width: 21px;
+    height: 20px;
+}
+
+.basket a:focus,
+.basket a:hover,
+.basket .active {
     color: rgb(50, 50, 50);
 
     background-color: rgb(248, 247, 244);
     background-image: url("img/basket-red.svg");
 }
 
-.basket:focus .basket-table,
-.basket:active .basket-table {
-    border-radius: 5px;
+.userblock .basket {
+    display: none;
+
+    width: 437px;
+    margin-top: 4px;
+    padding-left: 88px;
+    padding-right: 15px;
+    padding-top: 31px;
+    padding-bottom: 21px;
+
+    background-position: 0 0;
+    border-radius: 6px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.userblock > li:hover .basket {
+    display: block;
+}
+
+.basket-table img {
     position: absolute;
-    left: 870px;
-    top: 748px;
-    width: 539px;
-    height: 242px;
+    width: 11px;
+    height: 11px;
 }
 
-.basket-table .close {
-    background-image: url("img/cross-small.svg");
-}
+.basket-table img::before {
+    position: relative;
+    width: 11px;
+    height: 11px;
 
-.basket-table .basket-table-item-1 {
-    background-image: url("img/bascket-ice-cream-1.png");
-}
-
-.basket-table .basket-table-item-2 {
-    background-image: url("img/bascket-ice-cream-2.png");
+    top: 21px;
+    right: 58px;
+    background-image: url("img\cross-small.svg");
 }
 
 .basket-table td {
@@ -570,8 +596,6 @@ input[type="radio"].visually-hidden {
 .basket-table span {
     color: rgb(161, 180, 169)
 }
-
-/*разделитель*/
 
 .basket a::before {
     content: "";
@@ -596,8 +620,8 @@ input[type="radio"].visually-hidden {
 /*телефон и часы работы*/
 
 .header-time-phone-wrapper {
-    align-self: flex-end;
     display: flex;
+    align-content: flex-end;
     flex-wrap: wrap;
 
     width: 165px;
@@ -758,15 +782,13 @@ input[type="radio"].visually-hidden {
 
 /*малинки-шоколадки*/
 
-.action-item {
+.action-items {
     display: flex;
     justify-content: space-between;
-    width: 519px;
+    width: 100% auto;
+    margin-top: 41px;
     margin-bottom: 40px;
-    padding-top: 19px;
-    padding-bottom: 24px;
-    padding-left: 20px;
-    padding-right: 21px;
+    padding 0;
 
     font-weight: 700;
     color: rgb(50, 50, 50);
@@ -774,17 +796,18 @@ input[type="radio"].visually-hidden {
     border-radius: 14px;
 }
 
-.action-item h2 {
+.action-items h2 {
     margin: 0;
-    margin-top: 20;
+    margin-top: 20px;
     margin-bottom: 16px;
 
     font-size: 35px;
     line-height: 41px;
 }
 
-.action-item p {
+.action-items p {
     margin: 0;
+    margin-bottom: 44px;
 
     font-size: 18px;
     line-height: 22px;
@@ -793,11 +816,10 @@ input[type="radio"].visually-hidden {
 .action-item-raspberry,
 .action-item-chocolate {
     width: 560px;
-    min-height: 229px;
     padding-top: 19px;
     padding-bottom: 23px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 28px;
 
     color: rgb(255, 255, 255);
 
@@ -819,8 +841,29 @@ input[type="radio"].visually-hidden {
 
 .action-item-raspberry a,
 .action-item-chocolate a {
+    margin: 0;
+    margin-bottom: 23px;
+    padding: 21px 12px;
+
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.action-item-raspberry a {
+    width: 165px;
+    margin: 0;
+    margin-bottom: 23px;
+    margin-left: 374px;
+
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.action-item-chocolate a {
     width: 189px;
     margin: 0;
+    margin-bottom: 23px;
+    margin-left: 350px;
 
     font-size: 18px;
     line-height: 22px;
@@ -828,23 +871,26 @@ input[type="radio"].visually-hidden {
 
 /*мороженое, хиты*/
 
-.hit-items ul {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    margin: 0;
-    margin-bottom: 39px;
-    padding: 0;
-
-    list-style: none;
+.hit-items {
+    width: 1446px;
+    margin: 0 auto;
 
     font-size: 0;
+}
 
-    background-color: rgb(165, 183, 172);
+.hit-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+
+    list-style: none;
 }
 
 .hit-item {
-    positioin: relative;
+    position: relative;
     display: inline-block;
     width: 267px;
     margin-right: 26px;
@@ -852,21 +898,37 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
-.hit-item .hit-image {
+.hit-item:nth-child(4) {
+    margin-right: 0;
+}
+
+.hit-item .hit {
     position: absolute;
-    top: 1px;
-    right: 1px;
-    width: 60px;
-    height: 60px;
-    z-index: 2;
+    top: 0;
+    left: 61px;
+    width: 61px;
+    height: 61px;
+    overflow: hidden;
+    z-index: 20;
 
     background-image: url("img/hit.svg");
 }
 
+.hit-item .image {
+    width: 218px;
+    height: 168px;
+}
+
+.hit-item img {
+    max-width: 100%;
+}
+
 .hit-item-price {
+    position: absolute;
     display: inline-block;
     margin-bottom: 28px;
     margin-left: 0;
+    bottom: 75px;
 
     font-size: 45px;
     line-height: 45px;
@@ -874,14 +936,19 @@ input[type="radio"].visually-hidden {
     text-align: left;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
     color: rgb(255, 255, 255);
+    z-index: 20;
+}
+
+.hit-item-price span {
+    margin-left: 37px;
 }
 
 .hit-item-price span::before {
     content: "";
 
     position: absolute;
-    top: -9px;
-    left: 17px;
+    top: -10px;
+    right: 4px;
 
     width: 26px;
     height: 31px;
@@ -895,7 +962,11 @@ input[type="radio"].visually-hidden {
 
 .hit-items a {
     display: inline-block;
-    margin-bottom: 37px;
+
+    margin-top: 281px;
+    min-height: 44px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     font-size: 16px;
     line-height: 22px;
@@ -914,7 +985,7 @@ input[type="radio"].visually-hidden {
     position:absolute;
     top: 0;
     left: 0;
-    width: 221px;
+    width: 248px;
     height: 367px;
     padding-right: 10px;
     padding-left: 10px;
@@ -928,9 +999,11 @@ input[type="radio"].visually-hidden {
 .item-glance a {
     display: block;
     width: 195px;
-    margin:0 auto;
+    margin: 0 auto;
+    margin-top: 305px;
     margin-bottom: 16px;
     padding:14px 12px;
+
     color: rgb(255, 255, 255);
     font-size:24px;
     font-weight: 700;
@@ -950,15 +1023,19 @@ input[type="radio"].visually-hidden {
 /*вафля*/
 
 .production {
-    width: 1146px;
+    width: 100%;
     margin-bottom: 40px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 21px;
+    padding-right: 33px;
 
     color: rgb(50, 50, 50);
     text-align: left;
     font-weight: 400;
 
     background-image: url("img/waffle.png");
-    background-position: 50% 50%;
+    background-position: 100%;
     background-repeat: no-repeat;
     background-color: rgb(234, 222, 195);
     border-radius: 13px;
@@ -966,9 +1043,7 @@ input[type="radio"].visually-hidden {
 
 .production .lead {
     width: 1100px;
-    margin-top: 27px;
     margin-bottom: 21px;
-    margin-left: 21px;
 
     font-size: 24px;
     line-height: 30px;
@@ -977,10 +1052,10 @@ input[type="radio"].visually-hidden {
 .production-columns {
     display: flex;
     justify-content: space-between;
-    margin-top: 21px;
-    margin-bottom: 23px;
+    width: 1093px;
     padding-left: 76px;
     padding-right: 33px;
+    padding-top: 17px;
 
     color: rgb(50, 50, 50);
     font-size: 16px;
@@ -1000,73 +1075,39 @@ input[type="radio"].visually-hidden {
 .production-column-left {
     position: relative;
     width: 484px;
+    padding-left: 76px;
+    padding-top: 17px;
 }
 
-.production-column-left::before {
+.production-column p::before {
     content: "";
 
     position: absolute;
-    right: 58px;
-    top: -14px;
+    left: 0;
+    top: -17;
 
     width: 49px;
     height: 49px;
 
-    background-image: url("img/ice-cream.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-}
-
-.production-column-left::before {
-    content: "";
-
-    position: absolute;
-
-    right: 57px;
-    top: 117px;
-
-    width: 49px;
-    height: 49px;
-
-    background-image: url("img/eco.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    border: solid black;
 }
 
 .production-column-right {
     position: relative;
     width: 478px;
+    padding-top: 17px;
 }
 
-.production-column-right::before {
-    content: "";
-
-    position: absolute;
-    right: 57px;
-    top: -14px;
-
-    width: 49px;
-    height: 49px;
-
-    background-image: url("img/cow.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.production-column-left *:first-child,
+.production-column-right *:first-child {
+  margin-top: 0;
 }
 
-.production-column-right::before {
-    content: "";
-
-    position: absolute;
-
-    right: 57px;
-    top: 117px;
-
-    width: 49px;
-    height: 49px;
-
-    background-image: url("img/thermometer.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.production-column-left *:last-child,
+.production-column-right *:last-child {
+  margin-bottom: 0;
 }
 
 /*новости блога*/
