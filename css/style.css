@@ -53,6 +53,7 @@ input[type="radio"].visually-hidden {
     vertical-align: middle;
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 
+    border: none;
     background: linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     border-radius: 23px;
@@ -83,8 +84,8 @@ input[type="radio"].visually-hidden {
 
 .main-header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: right;
 
     margin-bottom: 0px;
 
@@ -93,7 +94,6 @@ input[type="radio"].visually-hidden {
 
 .main-header-wrapper {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
     width: 1146px;
     margin-bottom: 2px;
@@ -102,96 +102,140 @@ input[type="radio"].visually-hidden {
 .main-header-logo {
     width: 154px;
     height: 63px;
-    margin-right: 24px;
     margin-top: 23px;
-    /*--margin-bottom--*/
-
-    background-image: url("img/logo.svg");
 }
 
 .secondary-navigation {
     display: flex;
     flex-wrap: wrap;
-    max-width: 550px;
+    width: 349px;
     margin: 0;
     margin-top: 31px;
-    /*margin-bottom: ?px;*/
     padding: 0;
+    padding-left: 24px;
+    padding-right: 34px;
 
     list-style: none;
-
-    min-height: 16px;
 }
 
 .secondary-navigation a {
-    display: block;
+    margin-right: 28px;
 
+    color: rgb(255, 255, 255);
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     text-decoration: underline;
 }
 
-/*каталог*/
-
-.main-navigation-link {
-    position: relative;
-
-    margin-right: 27px;
+.secondary-navigation a:nth-child(3n) {
+    padding-right: 0;
 }
+
+.secondary-navigation a:hover,
+.secondary-navigation a:focus,
+.secondary-navigation a:active {
+    color: rgb(255, 188, 158);
+}
+
+/*каталог*/
 
 .main-navigation-link:focus,
 .main-navigation-link:hover {
-    width: 87px;
+    width: 60px;
+    padding: 14px 8px;
 
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
     color: rgb(50, 50, 50);
 
     background-color: rgb(248, 247, 244);
+    border-radius: 14px;
 }
 
 .main-navigation-link:active {
-    width: 87px;
+    width: 60px;
+    padding: 14px 8px;
+
+    font: inherit;
+    font-size: 16px;
+     line-height: 18px;
+    font-weight: 700;
     color: rgb(50, 50, 50);
 
+    background-color: rgb(248, 247, 244);
+    border-radius: 14px;
     box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
-    background-color: rgb(237, 237, 237);
-    border-radius: 15px;
 }
 
 .main-navigation-link .active {
-    color: rgb(255, 255, 255);
-    background-color: rgb(206, 112, 88);
-    box-shadow: none;
+    width: 60px;
+    padding: 14px 8px;
+
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+
+    background-color: rgb(208, 112, 88);
+    border-radius: 14px;
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
 
-.about-the-company {
-    margin-left: 29px;
+.main-navigation-item {
+    position: relative;
+    display: inline-block;
 }
 
-.sub-navigation-list {
+.main-navigation-item .sub-navigation-list {
     position: absolute;
+    right: 7px;
+    display: none;
+    width: 143px;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
 
     list-style: none;
+
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 .sub-navigation-list a {
     display: block;
+    margin-bottom: 16px;
+    text-align: center;
+
+    font: inherit;
+    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
     color: rgb(50, 50, 50);
 
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    background-color: rgb(248, 247, 244);
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    left: 359px;
-    top: 282px;
-    width: 143px;
+    border-style: none;
 }
 
-.sub-navigation-header {
+.sub-navigation-list a:first-child {
+    margin-top: 12px;
+    margin-bottom: 14px;
+
     font-weight: 700;
+
+    border-bottom: 1px solid rgb(240, 239, 236);
+}
+
+.sub-navigation-list a:nth-child(2n) {
+    margin-top: 11px;
+}
+
+.sub-navigation-list a:last-child {
+    margin-bottom: 15px;
 }
 
 .sub-navigation-list a:hover,
@@ -203,44 +247,50 @@ input[type="radio"].visually-hidden {
     background: rgb(246, 181, 165);
 }
 
-/*когда находимся на странице, на которую ведет ссылка*/
 .sub-navigation-list .active a {
     color: rgb(255, 255, 255);
 
     background: rgb(208, 112, 88);
 }
 
-/*--Пользовательская навигация*/
+.main-navigation-item > li:hover .sub-navigation-list {
+    display: block;
+}
+
+/*--Пользовательский блок--*/
 
 .user-block {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    max-width: 400px;
-    margin: 0;
-    margin-left: auto;
-    margin-top: 23px;
-    margin-bottom: 19px;
+
+    width: 262px;
     padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    margin-top: 23px;
 
     list-style: none;
+}
 
-    min-height: 32px;
+.user-block > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 /*форма поиска*/
 
 .button-search {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-left: 5px;
-    margin-right: 4px;
-    width: 33px;
-    height: 33px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
 
-    background-color: rgb(161, 180, 169);
+    background-color: rgb(167, 185, 175);
     background-repeat: no-repeat;
     background-position: 0 0;
     border-radius: 50%;
@@ -248,50 +298,45 @@ input[type="radio"].visually-hidden {
 
 .button-search:hover,
 .button-search:focus {
-    fill: rgb (50, 50, 50);
+    background-color: rgb(247, 246, 243);
+}
+
+.button-search:hover path,
+.button-search:focus path {
+    fill: rgb(50, 50, 50);
+}
+
+.user-block .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    width: 310px;
+    margin-top: 59px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 143px;
+    right: 570px;
+
     background-color: rgb(248, 247, 244);
-}
-
-/*--Вопрос: как сделать лупу черной (при наведении)? Сделать ее прозрачной и задать границу с нулевой прозрачностью черго цвета? Нужен ли здесь псевдоэлемент (и какой)?--*/
-
-.search:hover,
-.search:focus {
-    font-size: 14px;
-    line-height: 24px;
-    color: rgb(153, 153, 153);
-    text-align: left;
-
-    background: url(/*?*/);
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(211, 211, 210);
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    left: 64px;
-    top: 766px;
-    width: 313px;
-    height: 46px;
-}
-
-.search:hover .search-field,
-.search:focus .search-field {
+    background-position: 0 0;
     border-radius: 6px;
-    background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 51px;
-    top: 748px;
-    width: 341px;
-    height: 84px;
 }
 
-.search-field input {
+.search input {
     box-sizing: border-box;
-    width: 311px;
+    width: 309px;
     padding-left: 14px;
-    padding-top: 10px;
-    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 
+    font: inherit;
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
@@ -305,79 +350,98 @@ input[type="radio"].visually-hidden {
     border-radius: 5px;
 }
 
-.search-field input:hover,
-.search-field input:focus {
+.search input:hover,
+.search input:focus {
     border-width: 2px;
-    border-color: rgb(154, 154, 154);
-    opacity: 0.52;
-    left: 857px;
-    top: 2542px;
-    width: 267px;
-    height: 44px;
+    border-color: rgba(154, 154, 154, 0,52);
   }
 
-  .search-field input:active {
+  .search input:active {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
     color: rgb(50, 50, 50);
-    text-align: left;
-
     border-width: 2px;
     border-color: rgb(211, 211, 210);
-    opacity: 0.52;
-    left: 857px;
-    top: 2606px;
-    width: 267px;
-    height: 44px;
  }
 
 /*форма входа*/
 
 .enter a {
     position: relative;
-    width: 93px;
-    margin-right: 5px;
+
+    width: 32px;
+    margin-right: 9px;
     padding-left: 44px;
     padding-right: 17px;
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 9px;
 
     font-size: 14px;
     line-height: 16px;
+
+    background-color: rgb(167, 185, 175);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.enter a::before {
+    content: "";
+
+    position: absolute;
+    bottom: 9px;
+    right: 28px;
+
+    width: 20px;
+    height: 19px;
 }
 
 .enter a:hover,
 .enter a:focus {
-    background-color: rgb(248, 247, 244);
-    background-image: url(/*?*/);
+    background-color: rgb(247, 246, 243);
 }
 
-.enter a:hover .login-form,
-.enter a:focus .login-form {
+.enter a:hover path,
+.enter a:focus path {
+    fill: rgb(50, 50, 50);
+}
+
+.userblock .enter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    width: 240px;
+    margin-top: 4px;
+    padding: 0;
+    padding-left: 19px;
+    padding-right: 17px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    top: 143px;
+    right: 402px;
+
+    background-position: 0 0;
     border-radius: 6px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 484px;
-    top: 748px;
-    width: 277px;
-    height: 214px;
 }
 
 .enter-field input[type="email"],
 .enter-field input[type="password"] {
-    position: absolute;
-    margin-left: 20px;
-    margin-right: 17px;
-    margin-tio: 20px;
+    box-sizing: border-box;
+    width: 239px;
+    margin-bottom: 20px;
     padding-left: 14px;
     padding-top: 10px;
-    padding-bottom: 14px;
+    padding-bottom: 9px;
 
-    font-size: 16px;
+    font: inherit;
+    font-size: 14px;
     line-height: 24px;
-    color: rgb(50, 50, 50);
+    font-weight: 400;
+    color: rgb(153, 153, 153);
     text-align: left;
 
     background-color: rgb(255, 255, 255);
@@ -385,25 +449,12 @@ input[type="radio"].visually-hidden {
     border-width: 1px;
     border-color: rgb(211, 211, 210);
     border-radius: 5px;
-    left: 64px;
-    top: 766px;
-    width: 313px;
-    height: 46px;
-}
-
-.enter-field input[type="email"] {
-    margin-bottom: 20px;
 }
 
 .enter-field input:hover,
 .enter-field input:focus {
     border-width: 2px;
-    border-color: rgb(154, 154, 154);
-    opacity: 0.52;
-    left: 857px;
-    top: 2542px;
-    width: 267px;
-    height: 44px;
+    border-color: rgb(154, 154, 154)
   }
 
 .enter-field input:active {
@@ -411,24 +462,10 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     font-weight: 700;
     color: rgb(50, 50, 50);
-    text-align: left;
 
     border-width: 2px;
     border-color: rgb(211, 211, 210);
-    opacity: 0.52;
-    left: 857px;
-    top: 2606px;
-    width: 267px;
-    height: 44px;
 }
-
-/*.enter a:hover .login-form placeholder,
-.enter a:focus .login-form placeholder {
-    font-size: 16px;
-    line-height: 24px;
-    color: rgb(153, 153, 153);
-    text-align: left;
-}*/
 
 .enter a::before {
     content: "";
@@ -447,12 +484,19 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-.enter a:hover::before,
-.enter a:focus::before {
-    color: rgb(50; 50; 50);
+.login-form button {
+    width: 102px;
+    height: 45px;
+    margin-left: 18px;
+    margin-right: 19px;
+    margin-bottom: 22px;
 }
 
 .login-form a {
+    margin-top: 24px;
+    margin-bottom: 26px;
+    margin-right: 20px;
+
     font-size: 14px;
     line-height: 16px;
     color: rgb(50, 50, 50)
@@ -468,17 +512,16 @@ input[type="radio"].visually-hidden {
 
 .basket a {
     position: relative;
-    width: 117px;
-    padding-left: 45px;
-    padding-right: 34px;
+    width: 57px;
+    padding-left: 454px;
+    padding-right: 16px;
     padding-top: 9px;
     padding-bottom: 8px;
 
     font-size: 14px;
     line-height: 16px;
 
-    background-color: rgb(157, 177, 165);
-    opacity: 0.2;
+    background-color: rgba(157, 177, 165, 0.2);
     background-image: url("img/basket.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -530,8 +573,6 @@ input[type="radio"].visually-hidden {
 
 /*разделитель*/
 
-/*телефон и часы работы*/
-
 .basket a::before {
     content: "";
 
@@ -552,15 +593,23 @@ input[type="radio"].visually-hidden {
     background-image: url("img/basket-red.svg");
 }
 
+/*телефон и часы работы*/
+
 .header-time-phone-wrapper {
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 165px;
+    margin: 0;
+    margin-top: 19px;
+    padding: 0;
+    padding-left: 25px;
+
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
-    width: 267px;
-    margin: 0;
-    padding: 0;
-
-    min-height: 38px;
 }
 
 .header-time-phone span {
@@ -712,6 +761,7 @@ input[type="radio"].visually-hidden {
 .action-item {
     display: flex;
     justify-content: space-between;
+    width: 519px;
     margin-bottom: 40px;
     padding-top: 19px;
     padding-bottom: 24px;
@@ -726,7 +776,8 @@ input[type="radio"].visually-hidden {
 
 .action-item h2 {
     margin: 0;
-    margin-bottom: 15px;
+    margin-top: 20;
+    margin-bottom: 16px;
 
     font-size: 35px;
     line-height: 41px;
@@ -741,7 +792,6 @@ input[type="radio"].visually-hidden {
 
 .action-item-raspberry,
 .action-item-chocolate {
-    position: relative;
     width: 560px;
     min-height: 229px;
     padding-top: 19px;
@@ -769,9 +819,8 @@ input[type="radio"].visually-hidden {
 
 .action-item-raspberry a,
 .action-item-chocolate a {
-    position: absolute;
-    right: 21px;
-    bottom: 23px;
+    width: 189px;
+    margin: 0;
 
     font-size: 18px;
     line-height: 22px;
@@ -803,7 +852,7 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
-.hit-image {
+.hit-item .hit-image {
     position: absolute;
     top: 1px;
     right: 1px;
@@ -816,7 +865,6 @@ input[type="radio"].visually-hidden {
 
 .hit-item-price {
     display: inline-block;
-    min-height: 43px;
     margin-bottom: 28px;
     margin-left: 0;
 
@@ -854,6 +902,12 @@ input[type="radio"].visually-hidden {
     color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: underline;
+}
+
+.hit-items a:hover,
+.hit-items a:focus,
+.hit-items a:active {
+    color: rgb(255, 188, 158);
 }
 
 .hit-item .item-glance {
@@ -896,17 +950,9 @@ input[type="radio"].visually-hidden {
 /*вафля*/
 
 .production {
-    display: flex;
-    flex-direction: column;
-
     width: 1146px;
-    margin: 0;
     margin-bottom: 40px;
-    padding: 0;
 
-    min-height: 306px;
-
-    align-items: center;
     color: rgb(50, 50, 50);
     text-align: left;
     font-weight: 400;
@@ -915,51 +961,48 @@ input[type="radio"].visually-hidden {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: rgb(234, 222, 195);
-}
-
-.production ul {
-    list-style: none;
+    border-radius: 13px;
 }
 
 .production .lead {
-    display: block;
     width: 1100px;
-    margin: 0;
     margin-top: 27px;
-    margin-bottom: 7px;
+    margin-bottom: 21px;
     margin-left: 21px;
 
     font-size: 24px;
     line-height: 30px;
 }
 
-.production li {
-    font-size: 22px;
-    line-height: 16px;
-}
-
 .production-columns {
     display: flex;
     justify-content: space-between;
+    margin-top: 21px;
+    margin-bottom: 23px;
+    padding-left: 76px;
+    padding-right: 33px;
+
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.production-columns p {
+    margin-bottom: 22px;
+}
+
+.production-columns p:nth-child(2n) {
+    margin-bottom: 0;
 }
 
 .production-column-left {
-    width: 540px;
-    min-height: 250px;
-    margin: 0;
-    padding: 0;
-    margin-left: 20px;
-    margin-bottom: 22px;
-
-    min-height: 250px;
-}
-
-.production-item-top-left {
     position: relative;
-    margin-bottom: 22px;
+    width: 484px;
 }
 
-.production-item-top-left::before {
+.production-column-left::before {
     content: "";
 
     position: absolute;
@@ -974,17 +1017,13 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-.production-item-bottom-left {
-    position: relative;
-}
-
-.production-item-bottom-left::before {
+.production-column-left::before {
     content: "";
 
     position: absolute;
 
     right: 57px;
-    top: -14px;
+    top: 117px;
 
     width: 49px;
     height: 49px;
@@ -995,21 +1034,11 @@ input[type="radio"].visually-hidden {
 }
 
 .production-column-right {
-    width: 560px;
-    min-height: 250px;
-    margin: 0;
-    margin-left: 30px;
-    padding: 0;
-
-    min-height: 250px;
-}
-
-.production-item-top-right {
     position: relative;
-    margin-bottom: 22px;
+    width: 478px;
 }
 
-.production-item-top-right::before {
+.production-column-right::before {
     content: "";
 
     position: absolute;
@@ -1024,18 +1053,13 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-.production-item-bottom-right {
-    position: relative;
-    margin-bottom: 22px;
-}
-
-.production-item-bottom-right::before {
+.production-column-right::before {
     content: "";
 
     position: absolute;
 
     right: 57px;
-    top: -14px;
+    top: 117px;
 
     width: 49px;
     height: 49px;
@@ -1079,7 +1103,7 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-news h2 {
-    margin: 0;
+    margin-top: 25px;
     margin-bottom: 5px;
 
     font-size: 16px;
@@ -1105,20 +1129,29 @@ input[type="radio"].visually-hidden {
 
 /*подписка*/
 
-.subscription {
+.subscription-background {
     position: relative;
-    padding-top: 35px;
-    padding-left: 27px;
-    padding-right: 26px;
+    width: 549;
+    padding: 6px 5px;
+    background-image: url("img/bg-post.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
+.subscription-background .subscription-content {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 21px;
+    padding-bottom: 35px;
+
+    color: rgb(50, 50, 50);
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
 
-    background-image: url("img/bg-post.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(248, 247, 244);
+    background:  rgb(248, 247, 244);
+    z-index: 100;
 }
 
 .subscription::/*--?--*/ {
@@ -1128,18 +1161,15 @@ input[type="radio"].visually-hidden {
 
     background-color: rgb(248, 247, 244);
     border-radius: 10px;
-    z-index: 1;
 }
 
-.subscriprion p {
+.subscription-content p {
     margin: 0;
     margin-left: 27px;
     margin-bottom: 35px;
-
-    z-index: 2;
 }
 
-.subscription input {
+.subscription-content input {
     position: absolute;
     margin-bottom: 40px;
     margin-right: 10px;
@@ -1147,6 +1177,7 @@ input[type="radio"].visually-hidden {
     padding-top: 10px;
     padding-bottom: 8px;
 
+    font: inherit;
     font-size: 16px;
     line-height: 24px;
     color: rgb(153, 153, 153);
@@ -1161,13 +1192,13 @@ input[type="radio"].visually-hidden {
     z-index: 2;
 }
 
-.subscription input:hover {
+.subscription-content input:hover {
     border-width: 2px;
     border-color: rgb(154, 154, 154);
 }
 
-.subscription input: focus;
-.subscription input: active {
+.subscription-content input: focus;
+.subscription-content input: active {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
@@ -1178,7 +1209,7 @@ input[type="radio"].visually-hidden {
     border-color: rgb(46, 136, 228);
 }
 
-.subscription button {
+.subscription-content button {
     position: absolute;
     margin-right: 25px;
     margin-bottom: 38px;
@@ -1189,7 +1220,6 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
 
     border-radius: 22px;
-    z-index: 2;
 }
 
 /*карта и контакты*/
@@ -1208,7 +1238,7 @@ input[type="radio"].visually-hidden {
     background-size: cover, 80px;
     background-position: 266px 138px, 100%;
     background-repeat: no-repeat;
-    background-color: rgb(132, 157, 143);
+    background-color: rgb(247, 241, 217);
 }
 
 .location-contacts {
@@ -1269,72 +1299,6 @@ input[type="radio"].visually-hidden {
 
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     border-radius: 22px;
-}
-
-/*форма обратной связи*/
-
-.location a:active .feedback {
-    background-color: rgb(248, 247, 244);
-
-    border-radius: 10px;
-    background-color: rgb(248, 247, 244);
-    position: absolute;
-    left: 363px;
-    top: 337px;
-    width: 478px;
-    height: 443px;
-}
-
-.feedback h2 {
-    margin: 0;
-
-    font-size: 24px;
-    line-height: 28px;
-    color: rgb(50, 50, 50);
-}
-
-.feedback .input {
-    font-size: 16px;
-    line-height: 24px;
-    color: rgb(153, 153, 153);
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(178, 178, 178);
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    left: 857px;
-    top: 2478px;
-    width: 269px;
-    height: 46px;
-}
-
-.feedback input:hover,
-.feedback input:focus {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    color: rgb(50, 50, 50);
-
-    border-width: 2px;
-    border-color: rgb(154, 154, 154);
-    top: 2542px;
-    width: 267px;
-    height: 44px;
-}
-
-.feedback input:active {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    color: rgb(50, 50, 50);
-    text-align: left;
-}
-
-.feedback .button {
-    left: 677px;
-    top: 709px;
-    min-width: 139px;
 }
 
 /*подвал*/
@@ -1497,6 +1461,117 @@ input[type="radio"].visually-hidden {
     color: rgb(255, 188, 158);
 }
 
+/*Форма обратной связи*/
+
+.modal {
+    position: fixed;
+
+    display: none;
+
+    color: rgb(50, 50, 50);
+
+    background-color: rgb(248, 247, 244);
+    background-position: 0 0;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.modal-feedback {
+    top: 338px;
+    left: 50%;
+
+    display: none;
+
+    width: 428px;
+    margin-left: -214px;
+    padding-left: 24px;
+    padding-right: 25px;
+    padding-top: 17px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 34px;
+
+    width: 18px;
+    height: 17px;
+
+    font-size: 0;
+
+    background-color: rgb(248, 247, 244);
+    background-image: url("img/cross-big.svg");
+    border: 0;
+}
+
+.modal-feedback h2 {
+    margin: 0;
+}
+
+.feedback-form-text {
+    margin-top: 19px;
+    margin-bottom: 18px;
+    padding: 0;
+
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.login-form p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.feedback-comments textarea {
+    box-sizing: border-box
+    width: 426px;
+    padding-bottom: 120px;
+    margin-bottom: 25px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.feedback-comments textarea {
+    box-sizing: border-box;
+    width: 265px;
+    padding-top: 11px;
+    padding-bottom: 8px;
+    padding-right: 14px;
+    padding-left: 66px;
+
+    font: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 210);
+    border-radius: 5px;
+}
+
+.feedback-form input:hover,
+.feedback-comments textarea:hover {
+    border: 2px;
+}
+
+.feedback-form input:focus,
+.feedback-comments textarea:focus {
+    border: 2px rgb(143, 189, 236);
+}
+
+.feedback-form input:active,
+.feedback-comments textarea:active {
+    color: rgb(50, 50, 50);
+}
+
+.feedback-form button {
+  width: 139px;
+  margin-right: 24px;
+  margin-left: 314px;
+  margin-bottom: 27px;
+}
+
 /*КАТАЛОГ*/
 
 .breadcrumbs {
@@ -1562,12 +1637,13 @@ input[type="radio"].visually-hidden {
 
 .page-title {
     margin: 0;
-    margin-bottom: 25px;
+    margin-top: 7px;
+    margin-bottom: 26px;
     padding: 0;
 
     font-size: 35px;
     line-height: 41px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /*фильтры*/
@@ -1949,7 +2025,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog h2 {
-    maigin: 0;
+    margin: 0;
     padding: 0;
 }
 
